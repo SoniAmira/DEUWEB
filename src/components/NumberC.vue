@@ -89,11 +89,11 @@ h2 {
   color: #014d43;
 }
 @media (max-width: 768px) {
-  .counter-container {
-    gap: 40px;
-  }
   .counter-item {
     font-size: 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
   }
 }
 </style>
