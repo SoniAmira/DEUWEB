@@ -2,26 +2,23 @@
   <div id="app">
     <SocialsBar class="socialbar" />
     <router-view class="router-view-container"></router-view>
+    <ScrollBtn class="socialbar" />
   </div>
 </template>
 
 <script>
 import SocialsBar from "./components/SocialsBar.vue";
-
+import ScrollBtn from "./components/profile-card.vue";
 export default {
   components: {
     SocialsBar,
+    ScrollBtn,
   },
 };
 </script>
 
 <style>
-@font-face {
-  font-family: "museo-sans";
-  src: url("./assets/fonts/MuseoSans-100.ttf");
-}
 #app {
-  font-family: "museo-sans";
   text-align: center;
   color: #2c3e50;
   position: relative; /* Asegúrate de que el contenido esté posicionado relativamente */

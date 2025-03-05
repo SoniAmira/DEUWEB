@@ -160,4 +160,9 @@ textarea {
   background-color: #f8d7da;
   color: #721c24;
 }
+@media (max-width: 768px) {
+  .message {
+    padding-right: 0px;
+  }
+}
 </style>

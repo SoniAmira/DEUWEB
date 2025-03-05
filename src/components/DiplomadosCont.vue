@@ -15,7 +15,10 @@
           :key="index"
         >
           <img :src="diplomado.image" :alt="diplomado.alt" />
-          <h3>{{ diplomado.title }}</h3>
+          <div class="card-text">
+            <h3>{{ diplomado.title }}</h3>
+            <p>{{ diplomado.description }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -27,28 +30,31 @@ export default {
   name: "DiploCont",
   data() {
     return {
-      title: "Título de los Diplomados",
+      title: "Conoce Nuestros Diplomados",
       description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Magnam tempora culpa voluptatum illo incidunt porro amet 
                     minima vel illum, illum, eius non possimus placeat 
                     inventore dicta numquam.`,
-      buttonText: "EXPLORAR",
+      buttonText: "Explorar ⇀",
       buttonLink: "#",
       diplomados: [
         {
           image: require("../assets/marketing.png"),
           alt: "Descripción de la imagen de marketing",
           title: "MARKETING DIGITAL Y RRSS",
+          description: "Aprende estrategias digitales para potenciar marcas.",
         },
         {
           image: require("../assets/medicine.jpeg"),
           alt: "Descripción de la imagen de medicina",
           title: "ECOGRAFIA PULMONAR",
+          description: "Domina el diagnóstico por ultrasonido pulmonar.",
         },
         {
           image: require("../assets/programer.jpeg"),
           alt: "Descripción de la imagen de programación",
           title: "COMPUTACION DE ALTO RENDIMIENTO",
+          description: "Optimiza el rendimiento de sistemas computacionales.",
         },
       ],
     };
@@ -57,9 +63,15 @@ export default {
 </script>
 
 <style scoped>
-@font-face {
-  font-family: "Brandon";
-  src: url("../assets/fonts/HvDTrial_Brandon_Grotesque_regular-BF64a625c9311e1.otf");
+* {
+  font-family: museo-sans;
+}
+h1 {
+  font-weight: 700;
+}
+a {
+  color: #000000;
+  font-weight: 700;
 }
 .diplomados {
   width: 80%;
@@ -80,6 +92,10 @@ export default {
   flex-basis: 30%;
   text-align: left;
 }
+.hero-btn {
+  border: 1px solid black;
+  padding: 5px 23px;
+}
 
 .cards-container {
   flex-basis: 65%;
@@ -92,37 +108,45 @@ export default {
   position: relative;
   flex-basis: 30%;
   text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra en las tarjetas */
-  border-radius: 8px; /* Opcional: bordes redondeados para las tarjetas */
-  transition: box-shadow 0.3s ease; /* Transición suave en hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+  background: white;
+  overflow: hidden;
 }
 .diplo-col:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más intensa al pasar el mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 .diplo-col img {
   width: 100%;
-  height: 60vh;
   object-fit: cover;
+  height: 30vh;
 }
 
-.diplomados p {
-  color: black;
+.card-text {
+  padding: 15px;
+  text-align: center;
 }
 
-.diplo-col h3 {
+.card-text h3 {
   font-size: 15px;
+  margin-bottom: 10px;
+  color: #000000;
+  font-weight: 700;
   text-align: left;
-  position: absolute;
-  padding-left: 10px;
-  padding-right: 10px;
-  top: 80%;
-  color: #fff;
-  font-family: Brandon;
 }
 
-@media (max-width: 700px) {
+.card-text p {
+  font-size: 14px;
+  color: black;
+  text-align: left;
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
   .row-diplo {
     flex-direction: column;
+    gap: 30px;
   }
   .text-content,
   .cards-container {
@@ -130,6 +154,28 @@ export default {
   }
   .diplo-col {
     flex-basis: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .cards-container {
+    gap: 30px;
+  }
+  .row-diplo {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .text-content,
+  .cards-container {
+    flex-basis: 100%;
+  }
+  .diplo-col {
+    flex-basis: 100%;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
   }
 }
 </style>

@@ -4,7 +4,6 @@
     style="background-color: #000000"
   >
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -22,83 +21,87 @@
       >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/about">NOSOTROS</router-link>
+            <router-link class="nav-link" to="/about">Nosotros</router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/noticias">NOTICIAS</router-link>
-          </li>
+          <!-- Dropdown PROGRAMAS -->
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
-              id="navbarDropdownMenuLink3"
+              id="navbarDropdownProgramas"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              PROGRAMAS
+              Programas
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownProgramas">
               <li>
                 <router-link class="dropdown-item" to="/programas1"
-                  >DIVISIÓN DE PROYECTOS Y PROGRAMAS</router-link
+                  >Divisíon de Proyectos y Programas</router-link
                 >
               </li>
               <li>
                 <router-link class="dropdown-item" to="/programas2"
-                  >PROGRAMA MIRANDA</router-link
+                  >Programas Regionales</router-link
                 >
               </li>
               <li>
                 <router-link class="dropdown-item" to="/programas3"
-                  >PROGRAMA NUEVA ESPARTA</router-link
+                  >Productos y Servicios UCV</router-link
                 >
               </li>
             </ul>
           </li>
+
+          <!-- Dropdown DEPARTAMENTOS -->
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
-              id="navbarDropdownMenuLink3"
+              id="navbarDropdownDepartamentos"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              DEPARTAMENTOS
+              Departamentos
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownDepartamentos"
+            >
               <li>
                 <router-link class="dropdown-item" to="/departamentos1"
-                  >DEPARTAMENTO RELACIONES INTERINSTITUCIONALES</router-link
+                  >Relaciones Interinstitucionales</router-link
                 >
               </li>
               <li>
                 <router-link class="dropdown-item" to="/departamentos2"
-                  >DEPARTAMENTO EXTENSIÓN SOCIAL UNIVERSITARIA</router-link
+                  >Extensión Social Universitaria</router-link
                 >
               </li>
               <li>
                 <router-link class="dropdown-item" to="/departamentos3"
-                  >DEPARTAMENTO EDUCACIÓN CONTINUA Y PERMANENTE</router-link
+                  >Educacíon Continua y Permanente</router-link
                 >
               </li>
             </ul>
           </li>
+
           <li class="nav-item">
-            <router-link class="nav-link" to="/noticias"
-              >GRUPOS DE EXTENSIÓN</router-link
+            <router-link class="nav-link" to="/grupos"
+              >Grupos Extensión</router-link
             >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/noticias">ESPACIOS</router-link>
+            <router-link class="nav-link" to="/espacios">Espacios</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/noticias"
-              >CERTIFICACIONES</router-link
+            <router-link class="nav-link" to="/certificaciones"
+              >Certificaciones</router-link
             >
           </li>
         </ul>
@@ -108,19 +111,19 @@
 </template>
 
 <script>
+import { onMounted } from "vue";
+
 export default {
   name: "AppNavbar",
+  setup() {
+    onMounted(() => {
+      import("bootstrap/dist/js/bootstrap.bundle.min.js");
+    });
+  },
 };
 </script>
 
 <style scoped>
-@font-face {
-  font-family: "Brandon";
-  src: url("../assets/fonts/HvDTrial_Brandon_Grotesque_regular-BF64a625c9311e1.otf");
-}
-* {
-  font-family: Brandon;
-}
 /* Espaciado entre los ítems de la barra de navegación */
 .navbar-nav .nav-item {
   margin-right: 40px; /* Ajusta este valor según el espacio deseado */

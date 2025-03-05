@@ -1,7 +1,7 @@
 <template>
   <div style="min-height: 100vh; width: 100%">
     <section class="sub-header">
-      <h1>Departamentos</h1>
+      <h1>Programas</h1>
     </section>
     <AppNavbar />
     <section class="link-section">
@@ -10,10 +10,10 @@
           <li>
             <router-link to="/"><span>🚀</span></router-link>
           </li>
-          <li><router-link to="/departamentos">DEPARTAMENTOS</router-link></li>
+          <li><router-link to="/programas1">Programas</router-link></li>
           <li>
-            <router-link to="/departamentos"
-              >DIVISIÓN DE PROYECTOS Y PROGRAMAS</router-link
+            <router-link to="/programas1"
+              >Divisíon de Proyectos y Programas</router-link
             >
           </li>
         </ul>
@@ -22,46 +22,34 @@
     <section class="section-container">
       <div class="mision-vision">
         <h1 class="titulo">
-          DIVISIÓN DE PROYECTOS Y PROGRAMAS<span class="icon">🚀 </span>
+          Divisíon de Proyectos y Programas
+          <span class="icon">🚀 </span>
         </h1>
         <div class="content-container">
           <div class="paragraphs">
             <p>
-              Los Programas Regionales amplían, a otros espacios geográficos, la
-              acción de la extensión universitaria, facilitando además las bases
-              para ampliar la investigación y la docencia. Es por esto que los
-              Programas Regionales son focos de desarrollo local. <br />
-              <br />
-              coordinación de los programas locales como el Programa Nva.
-              Esparta, Miranda, Amazonas y Delta se constituyen, en esta
-              propuesta, en Departamentos que soportan la debida estructura
-              funcional y le dan peso institucional a las labores de
-              relacionamiento local con entes y organizaciones públicas y
-              privadas, especialmente en aquellos programas que cuentan con sede
-              propia. <br />
-              <br />
-              Al enlazar los Programas a través de una División se busca
-              centralizar la planificación, ejecución y seguimiento de las
-              actividades dentro de una misma estrategia. <br />
-              <br />
-              En esta División se encuentra también el Departamento de
-              Proyectos, Productos y Servicios UCV cuya función es identificar,
-              apoyar, visibilizar y conectar proyectos, productos y servicios
-              universitarios con la sociedad a través de diferentes mecanismos
-              como spin-off, startups, la incubación, la aceleración, el
-              licenciamiento y otros conformados por la empresa y la
-              universidad, que serán ejecutados por los entes universitarios
-              destinados a ese fin.
+              La División de Proyectos y Programas coordina los Programas
+              Regionales y los Proyectos Universitarios, fortaleciendo la
+              vinculación de la UCV con la sociedad. A través de la
+              planificación y ejecución estratégica, impulsa la innovación, el
+              emprendimiento y la transferencia de conocimiento, ampliando el
+              impacto de la universidad en el desarrollo local y regional.
             </p>
+            <h2>Misión</h2>
             <p>
-              <span class="icon-p"></span>
-              Mision y Vision. <br />
-              <br />
-              Coordinar los Programas Extensión Universitaria en las localidades
-              y regiones, y los Proyectos Universitarios para conectar con la
-              sociedad, convirtiéndose en actores del desarrollo regional y
-              local, ampliando la cobertura y el impacto de las acciones de la
-              Universidad a diferentes espacios de la geografía nacional
+              Coordinar y gestionar programas y proyectos universitarios que
+              fortalezcan la vinculación de la UCV con la sociedad, promoviendo
+              la innovación, el emprendimiento y la transferencia de
+              conocimiento. A través de alianzas estratégicas, buscamos ampliar
+              el impacto de la universidad en el desarrollo local y regional.
+            </p>
+            <h2>Visión</h2>
+            <p>
+              Ser un referente en la extensión universitaria, consolidando un
+              modelo de gestión innovador que fomente la investigación aplicada,
+              la cooperación con sectores productivos y el desarrollo sostenible
+              de las comunidades, ampliando el alcance y la proyección social de
+              la UCV.
             </p>
           </div>
         </div>
@@ -83,7 +71,7 @@
                       @click="openContentBar(item.title, item.description)"
                       class="hero-btn"
                     >
-                      CONOCE MÁS
+                      Conoce más ⇀
                     </button>
                   </div>
                 </div>
@@ -136,7 +124,7 @@ export default {
           title: "FUNCIONES",
           subtitle: "",
           description:
-            "Formular y evaluar la factibilidad de realizar programas y proyectos de orientación educativa.Asegurar el cumplimiento de los lineamientos metodológicos requeridos.Realizar informes de avance de los programas y proyectos de extensión educativa.Brindar información de los programas y proyectos de extensión educativa.Participar en la organización de cursos y talleres, así como en la coordinación de estos con las Facultades y Dependencias Centrales de la Universidad que lo requieran.Elaborar la planificación de cursos de capacitación, presenciales o a distancia a ser dictados por la Dirección de Extensión.Coordinar la divulgación de todos los programas educativos de extensión de la Universidad.Las demás funciones que le confieren las leyes y reglamentos, normas y su supervisor inmediato",
+            "Formular y evaluar la factibilidad de realizar programas y proyectos de orientación educativa. Asegurar el cumplimiento de los lineamientos metodológicos requeridos. Realizar informes de avance de los programas y proyectos de extensión educativa. Brindar información de los programas y proyectos de extensión educativa. Participar en la organización de cursos y talleres, así como en la coordinación de estos con las Facultades y Dependencias Centrales de la Universidad que lo requieran. Elaborar la planificación de cursos de capacitación, presenciales o a distancia a ser dictados por la Dirección de Extensión. Coordinar la divulgación de todos los programas educativos de extensión de la Universidad. Las demás funciones que le confieren las leyes y reglamentos, normas y su supervisor inmediato.",
         },
         {
           image: require("@/assets/P.png"),
@@ -190,13 +178,21 @@ export default {
 }
 * {
   font-family: "museo-sans";
-}
-.titulo {
-  letter-spacing: -2px;
-  font-size: 35px;
   font-weight: 700;
-  line-height: 1em;
-  font-family: "museo-sans";
+}
+p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6; /* Interlineado ajustado */
+  text-align: justify; /* Justificar texto para mejor lectura */
+  margin-bottom: 20px;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 100;
+  margin: 10px 0;
 }
 
 .sub-header {
@@ -219,17 +215,80 @@ export default {
   text-align: left;
   padding-left: 140px;
 }
-@media (max-width: 700px) {
-  .sub-header h1 {
-    padding-left: 30px;
-  }
+/* */
+.link-section {
+  background-color: #025247;
 }
 
-p {
-  color: #fff;
-  font-size: 30px;
-  padding: 10px;
+.breadcrumbs {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #025247; /* Fondo claro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 100px;
 }
+
+.breadcrumbs ul {
+  list-style: none;
+  display: flex;
+  gap: 10px; /* Espacio entre los elementos */
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "›"; /* Separador entre enlaces */
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #ffffff; /* Color del separador */
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #ffffff; /* Azul profesional */
+  font-weight: 500; /* Peso medio */
+  transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+  color: #ffffff; /* Azul más oscuro en hover */
+}
+/* */
+.content-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 70px;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.section-container {
+  width: 100%;
+  background-image: linear-gradient(#01695b, #01695bef),
+    url("../assets/deuimg.jpg");
+}
+.titulo {
+  font-weight: 700;
+  line-height: 1em;
+  font-family: "museo-sans";
+  padding-bottom: 20px;
+  margin: 0 auto; /* Centra el contenido */
+  border-bottom: 3px solid #ffffff; /* Color y grosor de la línea */
+  padding-bottom: 5px; /* Espacio entre el título y la línea */
+}
+
 .mision-vision {
   padding-top: 80px;
   width: 70%;
@@ -239,7 +298,20 @@ p {
   gap: 20px;
   margin: 0 auto;
   text-align: left;
+  padding: 40px 0;
 }
+
+.paragraphs {
+  flex-direction: column;
+  margin: 0 auto; /* Centra el contenido */
+  padding-top: 40px;
+}
+
+.paragraphs p {
+  font-size: 20px;
+  font-weight: 300;
+}
+/* */
 
 .drawer-enter-active,
 .drawer-leave-active {
@@ -289,12 +361,6 @@ p {
 .row {
   display: flex;
   flex-wrap: wrap;
-}
-
-@media (max-width: 700px) {
-  .row {
-    flex-direction: column;
-  }
 }
 
 .menu-global {
@@ -354,31 +420,6 @@ p {
   transform: translateY(0);
 }
 
-@media (max-width: 700px) {
-  .menu-col {
-    flex-direction: column;
-  }
-}
-
-.content-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 20px;
-  padding-bottom: 70px;
-}
-
-.paragraphs {
-  flex: 1;
-  flex-direction: column;
-}
-.paragraphs p {
-  margin-bottom: 20px; /* Espacio entre párrafos */
-  font-size: 20px;
-  font-weight: 300;
-}
 .image {
   max-width: 300px;
   margin-left: 20px;
@@ -386,63 +427,75 @@ p {
   padding-bottom: 50px;
 }
 
-.icon {
-  margin-right: 5px;
-  font-size: 2rem;
-}
-.section-container {
-  width: 100%;
-  background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
-}
 /** */
-.link-section {
-  background-color: #025247;
-}
-.breadcrumbs {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #025247; /* Fondo claro */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-left: 100px;
-}
+@media (max-width: 1024px) {
+  .hero-btn {
+    font-size: 18px; /* Aumenta el tamaño del botón */
+  }
+  h1 {
+    font-size: 40px; /* Aumenta el tamaño de h1 en pantallas grandes */
+  }
 
-.breadcrumbs ul {
-  list-style: none;
-  display: flex;
-  gap: 10px; /* Espacio entre los elementos */
-  margin: 0;
-  padding: 0;
-}
+  .titulo {
+    font-size: 40px; /* Aumenta el tamaño del título en pantallas grandes */
+  }
+  p {
+    font-size: 20px; /* Aumenta el tamaño del texto de los párrafos */
+    line-height: 1.8; /* Ajusta el interlineado */
+  }
 
-.breadcrumbs li {
-  display: flex;
-  align-items: center;
+  .sub-header h1 {
+    font-size: 40px; /* Aumenta el tamaño del h1 en la sección de sub-header */
+  }
+  .icon {
+    font-size: 3rem; /* Aumenta el tamaño de los iconos */
+  }
 }
-
-.breadcrumbs li:not(:last-child)::after {
-  content: "›"; /* Separador entre enlaces */
-  margin-left: 10px;
-  margin-right: 10px;
-  color: #ffffff; /* Color del separador */
-}
-
-.breadcrumbs a {
-  text-decoration: none;
-  color: #ffffff; /* Azul profesional */
-  font-weight: 500; /* Peso medio */
-  transition: color 0.3s;
-}
-
-.breadcrumbs a:hover {
-  color: #ffffff; /* Azul más oscuro en hover */
-}
-
-.icon {
-  font-size: 20px;
-  margin-right: 5px; /* Espacio entre el icono y el texto */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .menu-col {
+    flex-direction: column;
+  }
+  .sub-header h1 {
+    padding-left: 30px;
+  }
+  .row-about {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem; /* Reducir tamaño aún más en pantallas muy pequeñas */
+    line-height: 1.4;
+    margin-bottom: 25px; /* Reducir espacio entre párrafos */
+    padding: 0 5px; /* Reducir padding lateral en dispositivos más pequeños */
+    text-align: left;
+  }
+  .icon {
+    font-size: 1.5rem;
+  }
+  .titulo {
+    font-size: 1.5rem;
+  }
+  .paragraphs h3 {
+    font-size: 1rem;
+  }
+  .paragraphs p {
+    font-size: 1rem;
+  }
+  .objetivos {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .breadcrumbs {
+    margin-left: 10px;
+  }
+  .breadcrumbs a {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
 }
 </style>

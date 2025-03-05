@@ -33,11 +33,10 @@ export default {
   },
   computed: {
     formattedDescription() {
-      // Reemplaza cada punto seguido de un espacio por un símbolo + salto de línea
-      return this.description.replace(
-        /\.\s*/g,
-        '.<br><span class="highlight-symbol">•</span> '
-      );
+      // Asegúrate de que solo el símbolo y salto de línea se agreguen después de los puntos
+      return this.description
+        .replace(/(\.\s+)/g, '.<br><span class="highlight-symbol">•</span> ') // Reemplaza puntos seguidos de espacio por el símbolo y salto
+        .replace(/(\.\s*)$/, "."); // Asegura que el último punto no tenga salto de línea extra
     },
   },
   methods: {
@@ -60,11 +59,15 @@ export default {
 </script>
 
 <style scoped>
+* {
+  font-family: museo-sans;
+}
 .content-bar {
   position: fixed;
   top: 0;
   right: 0;
   width: 80%;
+  height: 100%;
   background-image: url("../assets/fondo.png");
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   padding: 20px;
@@ -125,6 +128,7 @@ export default {
     width: 100%;
   }
 }
+
 .content-bar p:first-of-type::before {
   content: "• "; /* Punto antes del primer párrafo */
   color: black; /* Asegúrate de que el color coincida con el diseño */

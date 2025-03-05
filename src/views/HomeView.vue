@@ -2,39 +2,32 @@
   <div style="min-height: 100vh; width: 100%">
     <section class="header">
       <div class="text-box">
-        <h1>Dirección de Extensión <br />Universitaria</h1>
+        <h1 class="animated-title">
+          Dirección de Extensión <br />Universitaria
+        </h1>
         <div class="headerbtn-container">
-          <router-link to="/about" class="hero-btn"
-            >CONOCE MÁS SOBRE NOSOTROS</router-link
-          >
+          <router-link to="/about" class="hero-btn"> Conoce Más ⇀ </router-link>
         </div>
       </div>
     </section>
     <MenuGlobal :menuItems="menuItems" />
     <DiploCont />
-    <sliderImage />
-    <section class="noticias">
-      <router-link to="/noticias" class="news-link">
-        <h2>Explora más noticias y anuncios</h2>
-      </router-link>
-      <Gallery :items="homeItems" />
-    </section>
+    <h1 class="numbers">Deu en Números</h1>
+    <NumberC />
   </div>
 </template>
 
 <script>
-import sliderImage from "../components/sliderImage.vue";
-import Gallery from "../components/GalleryView.vue";
 import MenuGlobal from "../components/MenuGlobal.vue";
 import DiploCont from "../components/DiplomadosCont.vue";
+import NumberC from "../components/NumberC.vue";
 
 export default {
   name: "HomeView",
   components: {
-    sliderImage,
-    Gallery,
     MenuGlobal,
     DiploCont,
+    NumberC,
   },
   data() {
     return {
@@ -83,16 +76,19 @@ export default {
   },
 };
 </script>
+
 <style>
 * {
+  font-family: museo-sans;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--fontSansSerif);
-  font-weight: 400;
-  font-size: 13.5px;
-  font-family: "rockwell";
 }
+.numbers {
+  font-weight: 700;
+}
+
+/* Estilo para la sección de cabecera */
 .header {
   height: 90vh;
   width: 100%;
@@ -103,6 +99,7 @@ export default {
   position: relative;
 }
 
+/* Estilo para el texto dentro de la cabecera */
 .text-box {
   width: 90%;
   color: #fff;
@@ -114,14 +111,12 @@ export default {
 }
 
 .text-box h1 {
-  font-size: 50px;
   text-shadow: 2px 7px 4px rgba(0, 0, 0, 0.8);
   padding-bottom: 40px;
 }
 
 .text-box p {
   margin: 10px 0 40px;
-  font-size: 14px;
   color: #fff;
   text-shadow: 2px 7px 4px rgba(0, 0, 0, 0.8);
 }
@@ -130,53 +125,65 @@ export default {
   text-align: left;
 }
 
-@media (max-width: 700px) {
-  .text-box h1 {
-    font-size: 20px;
+/* Animación de desvanecimiento y subida */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* */
+.animated-title {
+  font-size: 3em;
+  text-align: center;
+  animation: fadeInSlide 2s ease-out;
+}
 
-/*** */
+/* Botones en el header */
 .hero-btn {
   display: inline-block;
   text-decoration: none;
-  color: #000000;
-  border: 1px solid #000000;
-  padding: 12px 34px;
-  font-size: 13px;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 23px;
   background: transparent;
   position: relative;
   cursor: pointer;
   border-radius: 50px;
 }
+
 .hero-btn:hover {
   border: 1px solid #01695b;
   background: #01695b;
   transition: 1s;
 }
-.btn-container {
-  text-align: left;
-}
-.headerbtn-container .hero-btn {
+
+/* Estilo de los botones dentro del contenedor */
+.headerbtn-container .hero-btn a {
   color: #fff;
   border: 1px solid #fff;
   text-align: left;
 }
-/** */
-.noticias {
-  height: 100vh;
-  width: 100%;
-  text-align: left;
-  padding-top: 50px;
-  color: #000000;
-}
-.texto {
-  width: 70%;
-}
-.noticias h2 {
-  color: #000000;
-  padding-left: 200px;
+
+/* Media Queries */
+/* Mi pantalla */
+
+@media (max-width: 768px) {
+  .text-box h1 {
+    font-size: 2.5em;
+  }
+  .text-box {
+    width: 90%;
+  }
+  .header {
+    height: 80vh; /* Reducir la altura en móviles */
+  }
+  .numbers {
+    font-size: 1.5rem;
+  }
 }
 </style>

@@ -171,6 +171,20 @@ p {
 }
 
 /* Estilos responsivos */
+/* pantallas grandes */
+@media (max-width: 2000px) {
+  .menu-global {
+    margin-top: -120px; /* Ajusta el margen superior negativo según sea necesario */
+    z-index: 2; /* Asegura que esté por encima de la imagen */
+  }
+}
+/* mi pantalla */
+@media (max-width: 1366px) {
+  .menu-global {
+    margin-top: -120px; /* Ajusta el margen superior negativo según sea necesario */
+    z-index: 2; /* Asegura que esté por encima de la imagen */
+  }
+}
 @media (max-width: 1024px) {
   /* Ajuste para iPad y pantallas medianas */
   .menu-global {
@@ -195,7 +209,7 @@ p {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   /* Ajuste para móviles */
   .menu-global {
     margin-top: 0; /* Asegura que el menú no esté sobre la imagen */
@@ -216,6 +230,19 @@ p {
 
   .menu-col img {
     height: 100%; /* Asegúrate de que las imágenes cubran completamente las cajas */
+  }
+  .text-box {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .text-box p {
+    font-size: 1.3rem;
+  }
+  .layer .text-box {
+    top: 16%; /* Ajustar según sea necesario para mover todo el contenedor de texto más arriba */
+  }
+  .layer:hover .text-box {
+    top: 10%; /* Ajusta aquí también para que se mueva durante el hover */
   }
 }
 </style>

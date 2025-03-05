@@ -122,6 +122,9 @@ export default {
 </script>
 
 <style>
+* {
+  font-family: museo-sans;
+}
 .drawer {
   position: fixed;
   top: 0;

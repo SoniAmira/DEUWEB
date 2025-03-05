@@ -1,78 +1,54 @@
 <template>
   <div style="min-height: 100vh; width: 100%">
     <section class="sub-header">
-      <h1>Departamentos</h1>
+      <h1>Programas</h1>
     </section>
     <AppNavbar />
-    <section class="mision-vision">
-      <div class="about-content">
-        <h1>PROGRAMA MIRANDA</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor optio
-          neque delectus obcaecati, maiores alias aperiam, magni quis deserunt
-          illum quam. Dignissimos sapiente similique voluptatibus! Temporibus
-          earum dolorem veniam pariatur. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Dolor optio neque delectus obcaecati, maiores alias
-          aperiam, magni quis deserunt illum quam. Dignissimos sapiente
-          similique voluptatibus! Temporibus earum dolorem veniam pariatur.
-        </p>
-      </div>
-      <div class="about-content">
-        <div class="mision-vision-header">
-          <img src="../assets/comprobado.png" alt="Icono Misión" class="icon" />
-          <h2>Misión</h2>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor optio
-          neque delectus obcaecati, maiores alias aperiam, magni quis deserunt
-          illum quam. Dignissimos sapiente similique voluptatibus! Temporibus
-          earum dolorem veniam pariatur. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Dolor optio neque delectus obcaecati, maiores alias
-          aperiam, magni quis deserunt illum quam. Dignissimos sapiente
-          similique voluptatibus! Temporibus earum dolorem veniam pariatur.
-        </p>
-      </div>
-      <div class="about-content">
-        <div class="mision-vision-header">
-          <img src="../assets/comprobado.png" alt="Icono Visión" class="icon" />
-          <h2>Visión</h2>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor optio
-          neque delectus obcaecati, maiores alias aperiam, magni quis deserunt
-          illum quam. Dignissimos sapiente similique voluptatibus! Temporibus
-          earum dolorem veniam pariatur. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Dolor optio neque delectus obcaecati, maiores alias
-          aperiam, magni quis deserunt illum quam. Dignissimos sapiente
-          similique voluptatibus! Temporibus earum dolorem veniam pariatur.
-        </p>
-      </div>
+    <section class="link-section">
+      <nav class="breadcrumbs">
+        <ul>
+          <li>
+            <router-link to="/"><span>🚀</span></router-link>
+          </li>
+          <li><router-link to="/programas1">Programas</router-link></li>
+          <li>
+            <router-link to="/programas2">Programas Regionales</router-link>
+          </li>
+        </ul>
+      </nav>
     </section>
-    <section class="objetivos">
-      <div class="row-about">
-        <div class="about-col">
-          <div class="about-container-img">
-            <img src="../assets/Graduandos.jpg" />
-          </div>
-        </div>
-        <div class="about-col">
-          <h1>Objetivos y Funciones</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sit
-            eaque beatae consequatur, repudiandae mollitia blanditiis illo
-            quaerat inventore perspiciatis vitae. Nesciunt harum, deleniti atque
-            voluptatem rem fugit iure ipsum.
-          </p>
-          <div class="btn-container">
-            <button @click="openDrawer" class="hero-btn">CONOCE MÁS</button>
-            <transition
-              name="slide"
-              @before-enter="beforeEnter"
-              @enter="enter"
-              @leave="leave"
-            >
-              <Drawer v-if="isDrawerOpen" @close="closeDrawer" />
-            </transition>
+    <section class="section-container">
+      <div class="mision-vision">
+        <h1 class="titulo">
+          Programas Regionales
+          <span class="icon">🚀 </span>
+        </h1>
+        <div class="content-container">
+          <div class="paragraphs">
+            <p>
+              Los Programas Regionales fortalecen la presencia de la UCV en
+              distintas comunidades del país, articulando soluciones a
+              necesidades locales a través de la educación, la investigación y
+              la vinculación con la sociedad. Su propósito es impulsar el
+              desarrollo social, cultural y tecnológico mediante la formación
+              académica, el apoyo a la innovación y la prestación de servicios
+              en diversas áreas.
+            </p>
+            <h2>Misión</h2>
+            <p>
+              Promover la participación activa de la UCV en el desarrollo
+              regional, coordinando programas que respondan a las necesidades de
+              las comunidades en educación, salud, infraestructura y otras áreas
+              clave. A través de la vinculación con distintos sectores, buscamos
+              mejorar la calidad de vida y fomentar el progreso sostenible.
+            </p>
+            <h2>Visión</h2>
+            <p>
+              Ser un modelo de referencia en la gestión de programas
+              universitarios para el desarrollo local, consolidando a la UCV
+              como un actor clave en la transformación social y la generación de
+              conocimiento al servicio de las comunidades del país.
+            </p>
           </div>
         </div>
       </div>
@@ -82,73 +58,18 @@
       <div class="menu-global">
         <div class="row">
           <!-- Columna 1 -->
-          <div class="menu-col">
+          <div class="menu-col" v-for="(item, index) in menuItems" :key="index">
             <div class="image-container">
-              <img src="../assets/1.jpg" />
+              <img :src="item.image" alt="Imagen del menú" />
               <div class="layer">
                 <div class="text-box">
-                  <h3>Título 1</h3>
+                  <h3>{{ item.title }}</h3>
                   <div class="btn-container">
                     <button
-                      @click="
-                        openContentBar(
-                          'Título 1 para ContentBar',
-                          'Descripción detallada para ContentBar 1'
-                        )
-                      "
+                      @click="openContentBar(item.title, item.description)"
                       class="hero-btn"
                     >
-                      CONOCE MÁS
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Columna 2 -->
-          <div class="menu-col">
-            <div class="image-container">
-              <img src="../assets/2.jpg" />
-              <div class="layer">
-                <div class="text-box">
-                  <h3>Título 2</h3>
-                  <div class="btn-container">
-                    <button
-                      @click="
-                        openContentBar(
-                          'Título 2 para ContentBar',
-                          'Descripción detallada para ContentBar 2'
-                        )
-                      "
-                      class="hero-btn"
-                    >
-                      CONOCE MÁS
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Columna 3 -->
-          <div class="menu-col">
-            <div class="image-container">
-              <img src="../assets/3.jpg" />
-              <div class="layer">
-                <div class="text-box">
-                  <h3>Título 3</h3>
-                  <div class="btn-container">
-                    <button
-                      @click="
-                        openContentBar(
-                          'Título 3 para ContentBar',
-                          'Descripción detallada para ContentBar 3'
-                        )
-                      "
-                      class="hero-btn"
-                    >
-                      CONOCE MÁS
+                      Conoce más ⇀
                     </button>
                   </div>
                 </div>
@@ -165,76 +86,50 @@
         @close="closeContentBar"
       />
     </section>
-
-    <section class="objetivos">
-      <div class="row-about">
-        <div class="about-col">
-          <div class="about-container-img">
-            <img src="../assets/Graduandos.jpg" />
-          </div>
-        </div>
-        <div class="about-col">
-          <h1>Reseña Historica</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sit
-            eaque beatae consequatur, repudiandae mollitia blanditiis illo
-            quaerat inventore perspiciatis vitae. Nesciunt harum, deleniti atque
-            voluptatem rem fugit iure ipsum.
-          </p>
-          <div class="btn-container">
-            <button @click="showContentBar = true" class="hero-btn">
-              CONOCE MÁS
-            </button>
-            <ContentBar
-              :isVisible="showContentBar"
-              title="RESEÑA HISTORICA"
-              description="La Comisión de Extensión creada en 1988 con la finalidad de dar impulso a las actividades de extensión universitaria y proponer líneas de acción inmediatas que permitieran la integración de todas las Facultades y Dependencias. A partir de 1992 se inició un proceso de reestructuración cuyos resultados se plasmaron el 11 de diciembre de 1995 cuando el Consejo Universitario aprobó la creación de la Coordinación Central de Extensión y el 27 de noviembre de 2002, por decisión del Consejo Universitario, se le otorga rango de Dirección."
-              @close="handleClose"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+    <ContactForm />
   </div>
 </template>
 
 <script>
 import AppNavbar from "../components/appNavbar";
-import Drawer from "../components/Sidebar.vue";
 import ContentBar from "../components/content-bar.vue";
+import ContactForm from "../components/ContactForm.vue";
 
 export default {
   name: "Departamento1View",
   components: {
-    Drawer,
     AppNavbar,
     ContentBar,
+    ContactForm,
   },
   data() {
     return {
       isDrawerOpen: false,
+      isContentBarVisible: false,
       showContentBar: false,
+      currentTitle: "",
+      currentDescription: "",
       menuItems: [
         {
           image: require("@/assets/L.png"),
-          title: "PROGRAMAS",
-          subtitle: "Directora Ejecutiva",
+          title: "OBJETIVOS",
+          subtitle: "",
           description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, soluta hic eaque natus asperiores eligendi enim provident laborum.",
+            "Identificar las necesidades de desarrollo social y económico de las comunidades locales y regionales. Diseñar y ejecutar programas dentro de un marco de acción estratégico para la universidad, emanado desde la Dirección de Extensión Universitaria. Fortalecer el trabajo y la vinculación con las diversas comunidades locales y regionales, pertenecientes a los diferentes sectores.",
         },
         {
           image: require("@/assets/D.png"),
-          title: "DEPARTAMENTOS",
-          subtitle: "Directora Ejecutiva",
+          title: "FUNCIONES",
+          subtitle: "",
           description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, soluta hic eaque natus asperiores eligendi enim provident laborum.",
+            "Realizar estudios y diagnósticos para identificar las necesidades específicas de las comunidades en las que se implementarán los programas. Diseñar y ejecutar programas y proyectos que respondan a las necesidades identificadas, en el marco de las áreas de acción establecidas. Gestionar los recursos humanos, financieros y materiales necesarios para la ejecución de los programas. Monitorear y evaluar el impacto de los programas en las comunidades, con el fin de realizar los ajustes necesarios para mejorar su efectividad. Fortalecer la vinculación con las comunidades a través de la comunicación permanente y la participación activa en la gestión de los programas. Los Programas Regionales deben difundir los resultados de sus investigaciones y evaluaciones. Esto se puede hacer a través de publicaciones, conferencias y talleres. Los Programas Regionales deben fortalecer las redes de trabajo con otras instituciones que trabajan con las comunidades.",
         },
         {
           image: require("@/assets/P.png"),
-          title: "PROYECTOS",
-          subtitle: "Directora Ejecutiva",
+          title: "CONTACTO",
+          subtitle: "",
           description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, soluta hic eaque natus asperiores eligendi enim provident laborum.",
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, soluta hic eaque natus asperiores eligendi enim provident laborum",
         },
       ],
     };
@@ -245,6 +140,17 @@ export default {
     },
     closeDrawer() {
       this.isDrawerOpen = false;
+    },
+    openContentBar(title, description) {
+      this.currentTitle = title;
+      this.currentDescription = description;
+      this.isContentBarVisible = true;
+    },
+    closeContentBar() {
+      this.isContentBarVisible = false;
+    },
+    handleClose() {
+      this.showContentBar = false;
     },
     beforeEnter(el) {
       el.style.transform = "translateX(100%)";
@@ -260,14 +166,33 @@ export default {
       el.style.transform = "translateX(100%)";
       done();
     },
-    handleClose() {
-      this.showContentBar = false;
-    },
   },
 };
 </script>
-
 <style scoped>
+@font-face {
+  font-family: "museo-sans";
+  src: url("../assets/fonts/MuseoSans-100.ttf");
+}
+* {
+  font-family: "museo-sans";
+  font-weight: 700;
+}
+p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6; /* Interlineado ajustado */
+  text-align: justify; /* Justificar texto para mejor lectura */
+  margin-bottom: 20px;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 100;
+  margin: 10px 0;
+}
+
 .sub-header {
   height: 30vh;
   width: 100%;
@@ -288,114 +213,104 @@ export default {
   text-align: left;
   padding-left: 140px;
 }
-@media (max-width: 700px) {
-  .sub-header h1 {
-    padding-left: 30px;
-  }
-}
-/** */
-.about-content {
-  width: 80%;
-  margin: auto;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.about-content p {
-  color: #fff;
-  text-align: left;
-}
-h1 {
-  font-size: 36px;
-}
-.about-content h1 {
-  text-align: left;
-  color: white;
-  font-weight: 1;
-}
-p {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 22px;
-  padding: 10px;
+/* */
+.link-section {
+  background-color: #025247;
 }
 
-/*\//*\*/
+.breadcrumbs {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #025247; /* Fondo claro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 100px;
+}
+
+.breadcrumbs ul {
+  list-style: none;
+  display: flex;
+  gap: 10px; /* Espacio entre los elementos */
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "›"; /* Separador entre enlaces */
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #ffffff; /* Color del separador */
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #ffffff; /* Azul profesional */
+  font-weight: 500; /* Peso medio */
+  transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+  color: #ffffff; /* Azul más oscuro en hover */
+}
+/* */
+.content-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 70px;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.section-container {
+  width: 100%;
+  background-image: linear-gradient(#01695b, #01695bef),
+    url("../assets/deuimg.jpg");
+}
+.titulo {
+  font-weight: 700;
+  line-height: 1em;
+  font-family: "museo-sans";
+  padding-bottom: 20px;
+  margin: 0 auto; /* Centra el contenido */
+  border-bottom: 3px solid #ffffff; /* Color y grosor de la línea */
+  padding-bottom: 5px; /* Espacio entre el título y la línea */
+}
+
 .mision-vision {
   padding-top: 80px;
-  padding-bottom: 50px;
-  width: 100%;
-  margin: auto;
-  text-align: center;
+  width: 70%;
   background-image: linear-gradient(#01695b, #01695bef),
     url("../assets/deuimg.jpg");
   color: #fff;
-  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 40px 0;
+}
+
+.paragraphs {
   flex-direction: column;
-}
-.mision-vision-header {
-  display: flex;
-  align-items: center;
-  color: white;
-}
-.about-content p {
-  display: flex;
-  align-items: center;
-  padding-left: 50px;
-  color: white;
-}
-.about-content {
-  width: 70%;
-}
-.icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px; /* Espacio entre la imagen y el título */
+  margin: 0 auto; /* Centra el contenido */
+  padding-top: 40px;
 }
 
-h3 {
-  text-align: center;
-  font-weight: 100;
-  margin: 10px 0;
+.paragraphs p {
+  font-size: 20px;
+  font-weight: 300;
 }
-.row-about {
-  margin-top: 5%;
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-}
-@media (max-width: 700px) {
-  .row-about {
-    flex-direction: column;
-  }
-}
+/* */
 
-/** */
-.objetivos {
-  width: 70%;
-  margin: auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.about-col {
-  flex-basis: 48%;
-  padding: 30px 2px;
-}
-.about-col img {
-  width: 100%;
-}
-.about-col p {
-  color: black;
-  padding: 15px 0 25px;
-  text-align: left;
-}
-.about-col h1 {
-  padding-top: 0;
-  text-align: left;
-}
-
-/** */
 .drawer-enter-active,
 .drawer-leave-active {
   transition: transform 1s ease, opacity 1s ease;
@@ -404,18 +319,6 @@ h3 {
   transform: translateX(100%);
   opacity: 0;
 }
-/** */
-.menu-content h1 {
-  width: 80%;
-  margin: auto;
-  color: #01695b;
-  text-align: left;
-  padding-top: 10px;
-  padding-bottom: 30px;
-}
-/** */
-/** */
-
 .btn-container {
   display: none; /* Usa flexbox para alinear el contenido */
   justify-content: center; /* Centra horizontalmente */
@@ -453,17 +356,9 @@ h3 {
   background: #01695b;
   transition: 1s;
 }
-/** */
-/*** */
 .row {
   display: flex;
   flex-wrap: wrap;
-}
-
-@media (max-width: 700px) {
-  .row {
-    flex-direction: column;
-  }
 }
 
 .menu-global {
@@ -480,12 +375,6 @@ h3 {
   overflow: hidden;
   padding-left: 0px;
   padding-right: 0px;
-}
-
-.image-container {
-  position: relative;
-  width: 100%;
-  height: 75vh;
 }
 
 .menu-col img {
@@ -529,9 +418,82 @@ h3 {
   transform: translateY(0);
 }
 
-@media (max-width: 700px) {
+.image {
+  max-width: 300px;
+  margin-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+}
+
+/** */
+@media (max-width: 1024px) {
+  .hero-btn {
+    font-size: 18px; /* Aumenta el tamaño del botón */
+  }
+  h1 {
+    font-size: 40px; /* Aumenta el tamaño de h1 en pantallas grandes */
+  }
+
+  .titulo {
+    font-size: 40px; /* Aumenta el tamaño del título en pantallas grandes */
+  }
+  p {
+    font-size: 20px; /* Aumenta el tamaño del texto de los párrafos */
+    line-height: 1.8; /* Ajusta el interlineado */
+  }
+
+  .sub-header h1 {
+    font-size: 40px; /* Aumenta el tamaño del h1 en la sección de sub-header */
+  }
+  .icon {
+    font-size: 3rem; /* Aumenta el tamaño de los iconos */
+  }
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
   .menu-col {
     flex-direction: column;
+  }
+  .sub-header h1 {
+    padding-left: 30px;
+  }
+  .row-about {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem; /* Reducir tamaño aún más en pantallas muy pequeñas */
+    line-height: 1.4;
+    margin-bottom: 25px; /* Reducir espacio entre párrafos */
+    padding: 0 5px; /* Reducir padding lateral en dispositivos más pequeños */
+    text-align: left;
+  }
+  .icon {
+    font-size: 1.5rem;
+  }
+  .titulo {
+    font-size: 1.5rem;
+  }
+  .paragraphs h3 {
+    font-size: 1rem;
+  }
+  .paragraphs p {
+    font-size: 1rem;
+  }
+  .objetivos {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .breadcrumbs {
+    margin-left: 10px;
+  }
+  .breadcrumbs a {
+    font-size: 0.9rem;
+    line-height: 1;
   }
 }
 </style>

@@ -24,7 +24,7 @@
 }
 .breadcrumbs {
   padding: 10px;
-  background-color: #025247;
+  background-color: black;
 }
 
 .breadcrumbs ul {

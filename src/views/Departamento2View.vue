@@ -10,10 +10,10 @@
           <li>
             <router-link to="/"><span>🚀</span></router-link>
           </li>
-          <li><router-link to="/departamentos">DEPARTAMENTOS</router-link></li>
+          <li><router-link to="/departamentos1">Departamentos</router-link></li>
           <li>
-            <router-link to="/departamentos"
-              >DEPARTAMENTO EXTENSIÓN SOCIAL UNIVERSITARIA</router-link
+            <router-link to="/departamentos2"
+              >Extensión Social Universitaria</router-link
             >
           </li>
         </ul>
@@ -22,9 +22,8 @@
     <section class="section-container">
       <div class="mision-vision">
         <h1 class="titulo">
-          DEPARTAMENTO EXTENSIÓN SOCIAL UNIVERSITARIA<span class="icon"
-            >🚀
-          </span>
+          Departamento Extensión Social Universitaria
+          <span class="icon">🚀 </span>
         </h1>
         <div class="content-container">
           <div class="paragraphs">
@@ -37,18 +36,20 @@
               proyección de la Extensión Universitaria como función ejecutora
               entre los fondos de acción, inversión y desarrollo social.
             </p>
+            <h2>Misión</h2>
             <p>
-              <span class="icon-p"></span>
-              Mision y Vision. <br />
-              Diseñar, planificar y coordinar la acción social universitaria a
-              través de diferentes actividades articuladas entre estudiantes
-              organizados en grupos de extensión y comunidades, fondos
-              multilaterales, organizaciones de la sociedad civil e iniciativas
-              de responsabilidad social empresarial de organizaciones públicas y
-              privadas; sirviendo también de enlace entre las Facultades y
-              Escuelas con organizaciones mencionadas. Estas actividades están
-              dirigidas a la creación de bienestar social, el fortalecimiento
-              del tejido social y la proyección de la Extensión Universitaria.
+              Influir en el desarrollo integral de la ciudadanía universitaria y
+              su entorno, mediante programas y proyectos de gestión social para
+              el compromiso cívico, la equidad, y la responsabilidad social,
+              promoviendo una universidad comprometida con el bienestar
+              colectivo.
+            </p>
+            <h2>Visión</h2>
+            <p>
+              Innovar en la promoción de la gestión social universitaria,
+              construyendo puentes sólidos entre la universidad y la comunidad
+              para un desarrollo sostenible, consolidando la presencia de la UCV
+              a lo interno y externo.
             </p>
           </div>
         </div>
@@ -70,7 +71,7 @@
                       @click="openContentBar(item.title, item.description)"
                       class="hero-btn"
                     >
-                      CONOCE MÁS
+                      Conoce más ⇀
                     </button>
                   </div>
                 </div>
@@ -123,7 +124,7 @@ export default {
           title: "FUNCIONES",
           subtitle: "",
           description:
-            "Diseñar, elaborar y coordinar programas y proyectos que tengan que ver con la proyección extensionista universitaria.Desarrollar un sistema de información para el registro, monitoreo y seguimiento de proyectos y programas de extensión universitaria a nivel nacional.Conceptuar y proponer nuevos productos o servicios que posibiliten la generación de recursos propíos, a través de planes de funcionamiento como patrocinantes, convenios marco y específicos entre instituciones públicas y privadas.Participar en el desarrollo de la visión estratégica de la Dirección de Extensión Universitaria, a través de planes estratégicos que permitan demostrar la factibilidad de la permanencia y sustentabilidad de los productos ofertados.Controlar y evaluar los proyectos y programas que se realicen a través de convenios.Cooperar en la oferta de programas de inducción a estudiantes y profesores como actividad preparatoria al inicio de las prácticas comunitarias.Identificar las necesidades más apremiantes en las comunidades, con la finalidad de disponer de una base de datos de problemas comunitarios, la que junto a las que dispongan las Escuelas y Facultades de la UCV, pueden ser considerados como insumos para determinar acciones conjuntas.Diseñar propuestas para la firma de Rector(a), convenios para la presentación del servicio comunitario, con los Consejos Locales de Planificación Pública, Consejos Estadales de Planificación y Coordinación de Políticas Públicas, instituciones y organizaciones públicas o privadas y comunidad organizada entre otras.Evaluar los proyectos presentados por los sectores con iniciativa, a objeto de ser considerada su aprobación.Garantizar mecanismos de información para las distintas comunidades, sobre las áreas que competen a la Universidad Central de Venezuela relativas al Servicio Comunitario.Las demás funciones que le confiere las leyes y reglamentos, normas y su supervisor inmediato",
+            "Diseñar, elaborar y coordinar programas y proyectos que tengan que ver con la proyección extensionista universitaria. Desarrollar un sistema de información para el registro, monitoreo y seguimiento de proyectos y programas de extensión universitaria a nivel nacional. Conceptuar y proponer nuevos productos o servicios que posibiliten la generación de recursos propios, a través de planes de funcionamiento como patrocinantes, convenios marco y específicos entre instituciones públicas y privadas. Participar en el desarrollo de la visión estratégica de la Dirección de Extensión Universitaria, a través de planes estratégicos que permitan demostrar la factibilidad de la permanencia y sustentabilidad de los productos ofertados. Controlar y evaluar los proyectos y programas que se realicen a través de convenios. Cooperar en la oferta de programas de inducción a estudiantes y profesores como actividad preparatoria al inicio de las prácticas comunitarias. Identificar las necesidades más apremiantes en las comunidades, con la finalidad de disponer de una base de datos de problemas comunitarios, la que junto a las que dispongan las Escuelas y Facultades de la UCV, pueden ser considerados como insumos para determinar acciones conjuntas. Diseñar propuestas para la firma de Rector(a), convenios para la presentación del servicio comunitario, con los Consejos Locales de Planificación Pública, Consejos Estadales de Planificación y Coordinación de Políticas Públicas, instituciones y organizaciones públicas o privadas y comunidad organizada, entre otras. Evaluar los proyectos presentados por los sectores con iniciativa, a objeto de ser considerada su aprobación. Garantizar mecanismos de información para las distintas comunidades, sobre las áreas que competen a la Universidad Central de Venezuela relativas al Servicio Comunitario. Las demás funciones que le confiere las leyes y reglamentos, normas y su supervisor inmediato.",
         },
         {
           image: require("@/assets/P.png"),
@@ -171,19 +172,22 @@ export default {
 };
 </script>
 <style scoped>
+.contact-link {
+  color: #01695b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
 @font-face {
   font-family: "museo-sans";
   src: url("../assets/fonts/MuseoSans-100.ttf");
 }
 * {
   font-family: "museo-sans";
-}
-.titulo {
-  letter-spacing: -2px;
-  font-size: 35px;
   font-weight: 700;
-  line-height: 1em;
-  font-family: "museo-sans";
 }
 
 .sub-header {
@@ -206,17 +210,80 @@ export default {
   text-align: left;
   padding-left: 140px;
 }
-@media (max-width: 700px) {
-  .sub-header h1 {
-    padding-left: 30px;
-  }
+/* */
+.link-section {
+  background-color: #025247;
 }
 
-p {
-  color: #fff;
-  font-size: 30px;
-  padding: 10px;
+.breadcrumbs {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #025247; /* Fondo claro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 100px;
 }
+
+.breadcrumbs ul {
+  list-style: none;
+  display: flex;
+  gap: 10px; /* Espacio entre los elementos */
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "›"; /* Separador entre enlaces */
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #ffffff; /* Color del separador */
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #ffffff; /* Azul profesional */
+  font-weight: 500; /* Peso medio */
+  transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+  color: #ffffff; /* Azul más oscuro en hover */
+}
+/* */
+.content-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 70px;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.section-container {
+  width: 100%;
+  background-image: linear-gradient(#01695b, #01695bef),
+    url("../assets/deuimg.jpg");
+}
+.titulo {
+  font-weight: 700;
+  line-height: 1em;
+  font-family: "museo-sans";
+  padding-bottom: 20px;
+  margin: 0 auto; /* Centra el contenido */
+  border-bottom: 3px solid #ffffff; /* Color y grosor de la línea */
+  padding-bottom: 5px; /* Espacio entre el título y la línea */
+}
+
 .mision-vision {
   padding-top: 80px;
   width: 70%;
@@ -226,6 +293,24 @@ p {
   gap: 20px;
   margin: 0 auto;
   text-align: left;
+  padding: 40px 0;
+}
+
+.paragraphs {
+  flex-direction: column;
+  margin: 0 auto; /* Centra el contenido */
+  padding-top: 40px;
+}
+
+.paragraphs p {
+  font-size: 20px;
+  font-weight: 300;
+}
+/* */
+@media (min-width: 1024px) {
+  .hero-btn {
+    font-size: 18px; /* Aumenta el tamaño del botón */
+  }
 }
 
 .drawer-enter-active,
@@ -347,25 +432,6 @@ p {
   }
 }
 
-.content-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 20px;
-  padding-bottom: 70px;
-}
-
-.paragraphs {
-  flex: 1;
-  flex-direction: column;
-}
-.paragraphs p {
-  margin-bottom: 20px; /* Espacio entre párrafos */
-  font-size: 20px;
-  font-weight: 300;
-}
 .image {
   max-width: 300px;
   margin-left: 20px;
@@ -373,63 +439,65 @@ p {
   padding-bottom: 50px;
 }
 
-.icon {
-  margin-right: 5px;
-  font-size: 2rem;
-}
-.section-container {
-  width: 100%;
-  background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
-}
 /** */
-.link-section {
-  background-color: #025247;
-}
-.breadcrumbs {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #025247; /* Fondo claro */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-left: 100px;
-}
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 40px; /* Aumenta el tamaño de h1 en pantallas grandes */
+  }
 
-.breadcrumbs ul {
-  list-style: none;
-  display: flex;
-  gap: 10px; /* Espacio entre los elementos */
-  margin: 0;
-  padding: 0;
-}
+  .titulo {
+    font-size: 40px; /* Aumenta el tamaño del título en pantallas grandes */
+  }
+  p {
+    font-size: 20px; /* Aumenta el tamaño del texto de los párrafos */
+    line-height: 1.8; /* Ajusta el interlineado */
+  }
 
-.breadcrumbs li {
-  display: flex;
-  align-items: center;
+  .sub-header h1 {
+    font-size: 40px; /* Aumenta el tamaño del h1 en la sección de sub-header */
+  }
+  .icon {
+    font-size: 3rem; /* Aumenta el tamaño de los iconos */
+  }
 }
-
-.breadcrumbs li:not(:last-child)::after {
-  content: "›"; /* Separador entre enlaces */
-  margin-left: 10px;
-  margin-right: 10px;
-  color: #ffffff; /* Color del separador */
-}
-
-.breadcrumbs a {
-  text-decoration: none;
-  color: #ffffff; /* Azul profesional */
-  font-weight: 500; /* Peso medio */
-  transition: color 0.3s;
-}
-
-.breadcrumbs a:hover {
-  color: #ffffff; /* Azul más oscuro en hover */
-}
-
-.icon {
-  font-size: 20px;
-  margin-right: 5px; /* Espacio entre el icono y el texto */
+@media (max-width: 768px) {
+  .sub-header h1 {
+    padding-left: 30px;
+  }
+  .row-about {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem; /* Reducir tamaño aún más en pantallas muy pequeñas */
+    line-height: 1.4;
+    margin-bottom: 25px; /* Reducir espacio entre párrafos */
+    padding: 0 5px; /* Reducir padding lateral en dispositivos más pequeños */
+  }
+  .icon {
+    font-size: 1.5rem;
+  }
+  .titulo {
+    font-size: 1.5rem;
+  }
+  .paragraphs h3 {
+    font-size: 1rem;
+  }
+  .paragraphs p {
+    font-size: 1rem;
+  }
+  .objetivos {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .breadcrumbs {
+    margin-left: 10px;
+  }
+  .breadcrumbs a {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
 }
 </style>

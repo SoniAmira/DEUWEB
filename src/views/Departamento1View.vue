@@ -10,10 +10,10 @@
           <li>
             <router-link to="/"><span>🚀</span></router-link>
           </li>
-          <li><router-link to="/departamentos">DEPARTAMENTOS</router-link></li>
+          <li><router-link to="/departamentos1">Departamentos</router-link></li>
           <li>
-            <router-link to="/departamentos"
-              >DEPARTAMENTO DE RELACIONES INTERINSTITUCIONALES</router-link
+            <router-link to="/departamentos1"
+              >Relaciones Interinstitucionales</router-link
             >
           </li>
         </ul>
@@ -22,9 +22,8 @@
     <section class="section-container">
       <div class="mision-vision">
         <h1 class="titulo">
-          DEPARTAMENTO DE RELACIONES INTERINSTITUCIONALES<span class="icon"
-            >🚀</span
-          >
+          Departamento de Relaciones Interinstitucionales
+          <span class="icon">🚀 </span>
         </h1>
         <div class="content-container">
           <div class="paragraphs">
@@ -36,13 +35,23 @@
               cambia su nombre para identificarse apropiadamente con la
               dimensión e importancia de sus funciones.
             </p>
+            <h2>Misión</h2>
             <p>
-              <span class="icon-p"></span>
-              Misión y Visión. <br />
-              Promover la imagen institucional en diferentes escenarios a nivel
-              nacional a través de actividades educativas que permitan
-              transformación de la sociedad, mediante la utilización de medios
-              comunicacionales y estrategias en la organización de eventos.
+              Promover la imagen institucional a nivel nacional mediante
+              actividades educativas que impulsen la transformación social,
+              utilizando medios comunicacionales y estrategias para la
+              organización de eventos. Además, establecer y fortalecer
+              relaciones interinstitucionales para ampliar el alcance de la
+              universidad y generar sinergias que potencien sus proyectos de
+              extensión.
+            </p>
+            <h2>Visión</h2>
+            <p>
+              Ser un departamento líder en la promoción de la extensión
+              universitaria, reconocido por su capacidad de establecer alianzas
+              estratégicas, fomentar la participación de la comunidad
+              universitaria y organizar eventos que fortalezcan el vínculo entre
+              la universidad y la sociedad.
             </p>
           </div>
         </div>
@@ -64,7 +73,7 @@
                       @click="openContentBar(item.title, item.description)"
                       class="hero-btn"
                     >
-                      CONOCE MÁS
+                      Conoce más ⇀
                     </button>
                   </div>
                 </div>
@@ -110,14 +119,14 @@ export default {
           title: "OBJETIVOS",
           subtitle: "",
           description:
-            "Gestionar el establecimiento de relaciones con organizaciones públicas, privadas, comunitarias y del tercer sector, dentro de los planes estratégicos de la Dirección.",
+            "Gestionar el establecimiento de relaciones con organizaciones públicas, privadas, comunitarias y del tercer sector, dentro de los planes estratégicos de la Dirección. Gestionar la comunicación dirigida a divulgar las actividades de la Dirección dentro y fuera de la Universidad, dentro de los planes estratégicos de la Dirección. Planificar, organizar y realizar eventos que impulsen la función de los demás departamentos y dentro de los planes estratégicos de la Dirección.",
         },
         {
           image: require("@/assets/D.png"),
           title: "FUNCIONES",
           subtitle: "",
           description:
-            "Elaborar y coordinar planes y programas de comunicación internos y externos para proyectar la imagen de la Dirección de Extensión Universitaria.",
+            "Elaborar y coordinar planes y programas de comunicación internos y externos para proyectar la imagen de la Dirección de Extensión Universitaria. Divulgar a la comunidad mediante los medios de comunicación, videos, notas de prensa, entrevistas, entre otros; los aportes y resultados de la gestión académica, investigación y extensión de la Dirección de Extensión Universitaria, toda vez que se evalúa el impacto que produce el servicio. Diseñar, coordinar y ejecutar la política de comunicación institucional, previamente aprobada por el equipo directivo. Diseñar las actividades de logística y protocolo pertinentes a los eventos de extensión dentro y fuera de las instancias de la Universidad. Mantener comunicación periódica con las Dependencias y Facultades de la Universidad, para proyectar la Dirección de Extensión Universitaria. Realizar estudios de mercadeo que midan la factibilidad de comercializar los productos. Asesorar y colaborar con el resto de las dependencias de la DEU en la preparación del material impreso para la divulgación de la gestión de extensión. Establecer alianzas estratégicas con las coordinaciones de extensión de las Facultades a fin de promover actividades educativas culturales en procura de satisfacer las necesidades de la comunidad. Fomentar la asociación con instituciones públicas y privadas a la realización de actividades educativas en beneficio de la comunidad. Elaborar una propuesta de protocolo para el establecimiento de acuerdos a nivel nacional e internacional. Las demás funciones que le confieren las leyes y reglamentos, normas y su supervisor inmediato.",
         },
         {
           image: require("@/assets/P.png"),
@@ -154,29 +163,27 @@ export default {
 </script>
 
 <style scoped>
-/* Estilo general para enlaces */
-.contact-link {
-  color: #01695b;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contact-link:hover {
-  text-decoration: underline;
-}
 @font-face {
   font-family: "museo-sans";
   src: url("../assets/fonts/MuseoSans-100.ttf");
 }
 * {
   font-family: "museo-sans";
-}
-.titulo {
-  font-size: 30px;
   font-weight: 700;
-  line-height: 1em;
-  font-family: "museo-sans";
-  padding-bottom: 20px;
+}
+p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6; /* Interlineado ajustado */
+  text-align: justify; /* Justificar texto para mejor lectura */
+  margin-bottom: 20px;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 100;
+  margin: 10px 0;
 }
 
 .sub-header {
@@ -199,17 +206,80 @@ export default {
   text-align: left;
   padding-left: 140px;
 }
-@media (max-width: 700px) {
-  .sub-header h1 {
-    padding-left: 30px;
-  }
+/* */
+.link-section {
+  background-color: #025247;
 }
 
-p {
-  color: #fff;
-  font-size: 30px;
-  padding: 10px;
+.breadcrumbs {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #025247; /* Fondo claro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 100px;
 }
+
+.breadcrumbs ul {
+  list-style: none;
+  display: flex;
+  gap: 10px; /* Espacio entre los elementos */
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "›"; /* Separador entre enlaces */
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #ffffff; /* Color del separador */
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #ffffff; /* Azul profesional */
+  font-weight: 500; /* Peso medio */
+  transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+  color: #ffffff; /* Azul más oscuro en hover */
+}
+/* */
+.content-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 70px;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.section-container {
+  width: 100%;
+  background-image: linear-gradient(#01695b, #01695bef),
+    url("../assets/deuimg.jpg");
+}
+.titulo {
+  font-weight: 700;
+  line-height: 1em;
+  font-family: "museo-sans";
+  padding-bottom: 20px;
+  margin: 0 auto; /* Centra el contenido */
+  border-bottom: 3px solid #ffffff; /* Color y grosor de la línea */
+  padding-bottom: 5px; /* Espacio entre el título y la línea */
+}
+
 .mision-vision {
   padding-top: 80px;
   width: 70%;
@@ -219,7 +289,20 @@ p {
   gap: 20px;
   margin: 0 auto;
   text-align: left;
+  padding: 40px 0;
 }
+
+.paragraphs {
+  flex-direction: column;
+  margin: 0 auto; /* Centra el contenido */
+  padding-top: 40px;
+}
+
+.paragraphs p {
+  font-size: 20px;
+  font-weight: 300;
+}
+/* */
 
 .drawer-enter-active,
 .drawer-leave-active {
@@ -269,12 +352,6 @@ p {
 .row {
   display: flex;
   flex-wrap: wrap;
-}
-
-@media (max-width: 700px) {
-  .row {
-    flex-direction: column;
-  }
 }
 
 .menu-global {
@@ -334,31 +411,6 @@ p {
   transform: translateY(0);
 }
 
-@media (max-width: 700px) {
-  .menu-col {
-    flex-direction: column;
-  }
-}
-
-.content-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 20px;
-  padding-bottom: 70px;
-}
-
-.paragraphs {
-  flex: 1;
-  flex-direction: column;
-}
-.paragraphs p {
-  margin-bottom: 20px; /* Espacio entre párrafos */
-  font-size: 20px;
-  font-weight: 300;
-}
 .image {
   max-width: 300px;
   margin-left: 20px;
@@ -366,63 +418,75 @@ p {
   padding-bottom: 50px;
 }
 
-.icon {
-  margin-right: 5px;
-  font-size: 2rem;
-}
-.section-container {
-  width: 100%;
-  background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
-}
 /** */
-.link-section {
-  background-color: #025247;
-}
-.breadcrumbs {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #025247; /* Fondo claro */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-left: 100px;
-}
+@media (max-width: 1024px) {
+  .hero-btn {
+    font-size: 18px; /* Aumenta el tamaño del botón */
+  }
+  h1 {
+    font-size: 40px; /* Aumenta el tamaño de h1 en pantallas grandes */
+  }
 
-.breadcrumbs ul {
-  list-style: none;
-  display: flex;
-  gap: 10px; /* Espacio entre los elementos */
-  margin: 0;
-  padding: 0;
-}
+  .titulo {
+    font-size: 40px; /* Aumenta el tamaño del título en pantallas grandes */
+  }
+  p {
+    font-size: 20px; /* Aumenta el tamaño del texto de los párrafos */
+    line-height: 1.8; /* Ajusta el interlineado */
+  }
 
-.breadcrumbs li {
-  display: flex;
-  align-items: center;
+  .sub-header h1 {
+    font-size: 40px; /* Aumenta el tamaño del h1 en la sección de sub-header */
+  }
+  .icon {
+    font-size: 3rem; /* Aumenta el tamaño de los iconos */
+  }
 }
-
-.breadcrumbs li:not(:last-child)::after {
-  content: "›"; /* Separador entre enlaces */
-  margin-left: 10px;
-  margin-right: 10px;
-  color: #ffffff; /* Color del separador */
-}
-
-.breadcrumbs a {
-  text-decoration: none;
-  color: #ffffff; /* Azul profesional */
-  font-weight: 500; /* Peso medio */
-  transition: color 0.3s;
-}
-
-.breadcrumbs a:hover {
-  color: #ffffff; /* Azul más oscuro en hover */
-}
-
-.icon {
-  font-size: 20px;
-  margin-right: 5px; /* Espacio entre el icono y el texto */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .menu-col {
+    flex-direction: column;
+  }
+  .sub-header h1 {
+    padding-left: 30px;
+  }
+  .row-about {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem; /* Reducir tamaño aún más en pantallas muy pequeñas */
+    line-height: 1.4;
+    margin-bottom: 25px; /* Reducir espacio entre párrafos */
+    padding: 0 5px; /* Reducir padding lateral en dispositivos más pequeños */
+    text-align: left;
+  }
+  .icon {
+    font-size: 1.5rem;
+  }
+  .titulo {
+    font-size: 1.5rem;
+  }
+  .paragraphs h3 {
+    font-size: 1rem;
+  }
+  .paragraphs p {
+    font-size: 1rem;
+  }
+  .objetivos {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .breadcrumbs {
+    margin-left: 10px;
+  }
+  .breadcrumbs a {
+    font-size: 0.9rem;
+    line-height: 1;
+  }
 }
 </style>

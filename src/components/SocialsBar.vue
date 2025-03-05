@@ -83,4 +83,27 @@ ul li a:hover span {
   display: block;
   padding-left: 30%;
 }
+/* 🔹 Ajustes para dispositivos móviles */
+@media (max-width: 700px) {
+  nav {
+    width: 50px; /* Más pequeña en móviles */
+  }
+  nav li {
+    height: 40px; /* Elementos más compactos */
+  }
+  nav li a {
+    padding-left: 15%;
+    line-height: 40px; /* Ajusta la alineación del texto */
+  }
+  nav li a img {
+    width: 20px; /* Íconos más pequeños */
+    height: 20px;
+    top: 10px;
+    left: 15px;
+  }
+
+  nav:hover li a span {
+    padding-left: 30px;
+  }
+}
 </style>

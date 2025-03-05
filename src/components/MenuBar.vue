@@ -33,15 +33,10 @@ export default {
 * {
   font-family: museo-sans;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
-}
-
-@media (max-width: 700px) {
-  .row {
-    flex-direction: column;
-  }
 }
 
 .menu-global {
@@ -53,17 +48,17 @@ export default {
 }
 
 .row .menu-col {
-  flex-basis: 33.1%;
+  flex-basis: 33.33%; /* Divide en 3 columnas iguales */
   position: relative;
   overflow: hidden;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding: 0;
+  aspect-ratio: 1 / 1; /* Hace que cada item sea un cuadrado */
 }
 
 .image-container {
   position: relative;
   width: 100%;
-  height: 75vh;
+  height: 100%;
 }
 
 .menu-col img {
@@ -79,7 +74,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Capa negra con 50% de opacidad */
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,13 +83,13 @@ export default {
 
 /* Efecto hover sobre la capa */
 .layer:hover {
-  background: #01695b; /* Aumenta la opacidad al hacer hover */
+  background: #01695b;
 }
 
 .text-box {
   color: #fff;
   text-align: center;
-  padding: 70px;
+  padding: 10%;
   opacity: 1;
   transition: all 0.5s ease;
 }
@@ -107,8 +102,7 @@ export default {
   transform: translateY(0);
 }
 
-h3,
-h5 {
+h3 h5 {
   margin: 10px 0;
   text-align: center;
   color: #fff;
@@ -125,9 +119,26 @@ p {
   transition: all 0.5s ease;
 }
 
-@media (max-width: 700px) {
-  .menu-col {
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+  .row {
     flex-direction: column;
+  }
+
+  .menu-col {
+    flex-basis: 100%;
+    aspect-ratio: 1 / 1; /* Asegura que sean cuadrados en tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .menu-col {
+    flex-basis: 100%;
+    aspect-ratio: 1 / 1; /* Mantiene cuadrados los items en móviles */
   }
 }
 </style>
