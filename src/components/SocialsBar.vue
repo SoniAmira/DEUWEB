@@ -3,19 +3,19 @@
     <ul>
       <li>
         <a href="#">
-          <img src="..\assets\facebook.png" alt="Facebook Icon" />
+          <img src="..\assets\img\facebook.png" alt="Facebook Icon" />
           <span>Facebook</span>
         </a>
       </li>
       <li>
         <a href="#">
-          <img src="..\assets\twitter.png" alt="Twitter Icon" />
+          <img src="..\assets\img\twitter.png" alt="Twitter Icon" />
           <span>Twitter</span>
         </a>
       </li>
       <li>
         <a href="#">
-          <img src="..\assets\instagram.png" alt="Instagram Icon" />
+          <img src="..\assets\img\instagram.png" alt="Instagram Icon" />
           <span>Instagram</span>
         </a>
       </li>

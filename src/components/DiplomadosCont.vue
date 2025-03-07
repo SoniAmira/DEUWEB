@@ -31,27 +31,24 @@ export default {
   data() {
     return {
       title: "Conoce Nuestros Diplomados",
-      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Magnam tempora culpa voluptatum illo incidunt porro amet 
-                    minima vel illum, illum, eius non possimus placeat 
-                    inventore dicta numquam.`,
+      description: `Explora nuestra oferta académica diseñada para potenciar tu conocimiento y desarrollo profesional en diversas áreas.`,
       buttonText: "Explorar ⇀",
       buttonLink: "#",
       diplomados: [
         {
-          image: require("../assets/marketing.png"),
+          image: require("../assets/img/marketing.png"),
           alt: "Descripción de la imagen de marketing",
           title: "MARKETING DIGITAL Y RRSS",
           description: "Aprende estrategias digitales para potenciar marcas.",
         },
         {
-          image: require("../assets/medicine.jpeg"),
+          image: require("../assets/img/medicine.jpeg"),
           alt: "Descripción de la imagen de medicina",
           title: "ECOGRAFIA PULMONAR",
           description: "Domina el diagnóstico por ultrasonido pulmonar.",
         },
         {
-          image: require("../assets/programer.jpeg"),
+          image: require("../assets/img/programer.jpeg"),
           alt: "Descripción de la imagen de programación",
           title: "COMPUTACION DE ALTO RENDIMIENTO",
           description: "Optimiza el rendimiento de sistemas computacionales.",
@@ -91,6 +88,7 @@ a {
 .text-content {
   flex-basis: 30%;
   text-align: left;
+  font-size: 20px;
 }
 .hero-btn {
   border: 1px solid black;

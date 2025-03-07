@@ -95,5 +95,9 @@ h2 {
   h2 {
     font-size: 1.5rem;
   }
+  .counter-container {
+    flex-direction: column;
+    padding: 10px;
+  }
 }
 </style>

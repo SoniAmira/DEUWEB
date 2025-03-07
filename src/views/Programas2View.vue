@@ -111,21 +111,21 @@ export default {
       currentDescription: "",
       menuItems: [
         {
-          image: require("@/assets/L.png"),
+          image: require("@/assets/img/L.png"),
           title: "OBJETIVOS",
           subtitle: "",
           description:
             "Identificar las necesidades de desarrollo social y económico de las comunidades locales y regionales. Diseñar y ejecutar programas dentro de un marco de acción estratégico para la universidad, emanado desde la Dirección de Extensión Universitaria. Fortalecer el trabajo y la vinculación con las diversas comunidades locales y regionales, pertenecientes a los diferentes sectores.",
         },
         {
-          image: require("@/assets/D.png"),
+          image: require("@/assets/img/D.png"),
           title: "FUNCIONES",
           subtitle: "",
           description:
             "Realizar estudios y diagnósticos para identificar las necesidades específicas de las comunidades en las que se implementarán los programas. Diseñar y ejecutar programas y proyectos que respondan a las necesidades identificadas, en el marco de las áreas de acción establecidas. Gestionar los recursos humanos, financieros y materiales necesarios para la ejecución de los programas. Monitorear y evaluar el impacto de los programas en las comunidades, con el fin de realizar los ajustes necesarios para mejorar su efectividad. Fortalecer la vinculación con las comunidades a través de la comunicación permanente y la participación activa en la gestión de los programas. Los Programas Regionales deben difundir los resultados de sus investigaciones y evaluaciones. Esto se puede hacer a través de publicaciones, conferencias y talleres. Los Programas Regionales deben fortalecer las redes de trabajo con otras instituciones que trabajan con las comunidades.",
         },
         {
-          image: require("@/assets/P.png"),
+          image: require("@/assets/img/P.png"),
           title: "CONTACTO",
           subtitle: "",
           description:
@@ -176,12 +176,10 @@ export default {
 }
 * {
   font-family: "museo-sans";
-  font-weight: 700;
 }
 p {
   color: #fff;
   font-size: 20px;
-  font-weight: 300;
   line-height: 1.6; /* Interlineado ajustado */
   text-align: justify; /* Justificar texto para mejor lectura */
   margin-bottom: 20px;
@@ -202,7 +200,7 @@ h3 {
       rgba(0, 0, 0, 0.9),
       rgba(0, 0, 0, 0.1)
     ),
-    url("../assets/graduacion.jpg");
+    url("../assets/img/graduacion.jpg");
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -275,7 +273,7 @@ h3 {
 .section-container {
   width: 100%;
   background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
+    url("../assets/img/deuimg.jpg");
 }
 .titulo {
   font-weight: 700;
@@ -291,7 +289,7 @@ h3 {
   padding-top: 80px;
   width: 70%;
   background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
+    url("../assets/img/deuimg.jpg");
   color: #fff;
   gap: 20px;
   margin: 0 auto;
@@ -494,6 +492,13 @@ h3 {
   .breadcrumbs a {
     font-size: 0.9rem;
     line-height: 1;
+  }
+  .mision-vision {
+    padding: 20px 40px;
+    width: 100%;
+  }
+  .sub-header {
+    height: 20vh;
   }
 }
 </style>

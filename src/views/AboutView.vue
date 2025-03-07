@@ -48,7 +48,7 @@
       <div class="card-container">
         <div class="card">
           <div class="icon">
-            <img src="../assets/compromiso.png" alt="Icono 1" />
+            <img src="../assets/img/compromiso.png" alt="Icono 1" />
           </div>
           <h3 class="title">COMPROMISO</h3>
           <p class="text">
@@ -60,7 +60,7 @@
         </div>
         <div class="card">
           <div class="icon">
-            <img src="../assets/excelencia.png" alt="Icono 2" />
+            <img src="../assets/img/excelencia.png" alt="Icono 2" />
           </div>
           <h3 class="title">EXCELENCIA</h3>
           <p class="text">
@@ -72,7 +72,7 @@
         </div>
         <div class="card">
           <div class="icon">
-            <img src="../assets/innovacion.png" alt="Icono 3" />
+            <img src="../assets/img/innovacion.png" alt="Icono 3" />
           </div>
           <h3 class="title">INNOVACIÓN</h3>
           <p class="text">
@@ -84,7 +84,7 @@
         </div>
         <div class="card">
           <div class="icon">
-            <img src="../assets/colaboracion.png" alt="Icono 4" />
+            <img src="../assets/img/colaboracion.png" alt="Icono 4" />
           </div>
           <h3 class="title">COLABORACIÓN</h3>
           <p class="text">
@@ -100,7 +100,7 @@
       <div class="row-about">
         <div class="about-col">
           <div class="about-container-img">
-            <img src="../assets/IMAGEN_A.png" />
+            <img src="../assets/img/IMAGEN_A.png" />
           </div>
         </div>
         <div class="about-col">
@@ -131,16 +131,17 @@
       <div class="row-about">
         <div class="about-col">
           <div class="about-container-img">
-            <img src="../assets/IMAGEN_B.png" />
+            <img src="../assets/img/IMAGEN_B.png" />
           </div>
         </div>
         <div class="about-col">
           <h1>Reseña Historica</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sit
-            eaque beatae consequatur, repudiandae mollitia blanditiis illo
-            quaerat inventore perspiciatis vitae. Nesciunt harum, deleniti atque
-            voluptatem rem fugit iure ipsum.
+            La Dirección de Extensión Universitaria ha sido clave en la conexión
+            entre la universidad y la sociedad, promoviendo proyectos de
+            formación continua, cooperación y desarrollo comunitario. A lo largo
+            de los años, ha fortalecido su compromiso con la educación y el
+            progreso social, respondiendo a las necesidades del entorno.
           </p>
           <div class="btn-container">
             <button @click="showContentBar = true" class="hero-btn">
@@ -165,16 +166,14 @@
             conmemorativa titulada Celebrando nuestra historia y con visión
             hacia el futuro, en el Aula Magna de la UCV.  Este evento destacó
             los logros alcanzados y reafirmó el compromiso de la dirección con
-            la formación, la gestión social y la innovación.
-
-A lo largo de su historia, la Dirección de Extensión Universitaria ha sido fundamental en la consolidación de la UCV como una institución comprometida con el desarrollo integral de la sociedad venezolana, promoviendo la educación continua y la participación activa en la resolución de los desafíos sociales y culturales del país"
+            la formación, la gestión social y la innovación. A lo largo de su historia, la Dirección de Extensión Universitaria ha sido fundamental en la consolidación de la UCV como una institución comprometida con el desarrollo integral de la sociedad venezolana, promoviendo la educación continua y la participación activa en la resolución de los desafíos sociales y culturales del país."
               @close="handleClose"
             />
           </div>
         </div>
       </div>
     </section>
-    <img src="../assets/f_organigrama.png" class="organigrama" />
+    <img src="../assets/img/f_organigrama.png" class="organigrama" />
   </div>
 </template>
 
@@ -198,21 +197,21 @@ export default {
       showContentBar: false,
       menuItems: [
         {
-          image: require("@/assets/josephp.jpg"),
+          image: require("@/assets/img/josephp.jpg"),
           title: "Ing. José Antonio Fernández",
           subtitle: "Sub-Director",
           description:
             "Subdirector de la Dirección de Extensión Universitaria, enfocado en fortalecer las relaciones interinstitucionales y coordinar iniciativas que impulsen la innovación y el desarrollo.",
         },
         {
-          image: require("@/assets/mercyphp.jpg"),
+          image: require("@/assets/img/mercyphp.jpg"),
           title: "Prof. Mercy Ospina",
           subtitle: "Directora",
           description:
             "Directora de la Dirección de Extensión Universitaria, comprometida con la promoción del conocimiento y la acción social para generar un impacto positivo en la comunidad universitaria y la sociedad en general.",
         },
         {
-          image: require("@/assets/eglin1.png"),
+          image: require("@/assets/img/eglin1.png"),
           title: "Sra. Eglin González",
           subtitle: "Secretaria Ejecutiva",
           description:
@@ -252,7 +251,6 @@ export default {
 <style scoped>
 * {
   font-family: museo-sans;
-  font-weight: 700;
 }
 
 .sub-header {
@@ -264,7 +262,7 @@ export default {
       rgba(0, 0, 0, 0.9),
       rgba(0, 0, 0, 0.1)
     ),
-    url("../assets/nubes.png");
+    url("../assets/img/nubes.png");
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -295,7 +293,7 @@ h3 {
 .row-about {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 100px;
 }
 
 .objetivos {
@@ -322,6 +320,7 @@ h3 {
 .about-col h1 {
   padding-top: 0;
   text-align: left;
+  font-weight: 700;
 }
 
 .hero-btn {
@@ -384,7 +383,7 @@ h3 {
 .section-container {
   width: 100%;
   background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
+    url("../assets/img/deuimg.jpg");
 }
 .titulo {
   font-weight: 700;
@@ -400,7 +399,7 @@ h3 {
   padding-top: 80px;
   width: 70%;
   background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
+    url("../assets/img/deuimg.jpg");
   color: #fff;
   gap: 20px;
   margin: 0 auto;
@@ -484,7 +483,7 @@ h3 {
   font-family: "museo-sans";
   padding-bottom: 20px;
   margin: 0 auto; /* Centra el contenido */
-  padding-bottom: 5px; /* Espacio entre el título y la línea */
+  padding-bottom: 50px; /* Espacio entre el título y la línea */
   padding-top: 100px;
 }
 .card-container {
@@ -631,6 +630,16 @@ h3 {
   .breadcrumbs a {
     font-size: 0.9rem;
     line-height: 1.5;
+  }
+  .mision-vision {
+    padding: 20px 40px;
+    width: 100%;
+  }
+  .sub-header {
+    height: 20vh;
+  }
+  .row-about {
+    gap: 50px;
   }
 }
 </style>

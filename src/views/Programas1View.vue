@@ -113,21 +113,21 @@ export default {
       currentDescription: "",
       menuItems: [
         {
-          image: require("@/assets/L.png"),
+          image: require("@/assets/img/L.png"),
           title: "OBJETIVOS",
           subtitle: "",
           description:
             "Planificación, diseño, ejecución y evaluación de programas y proyectos de extensión universitaria en las localidades y regiones del país. Promover el establecimiento de alianzas estratégicas con actores públicos, privados y sociales para la ejecución de programas y proyectos.",
         },
         {
-          image: require("@/assets/D.png"),
+          image: require("@/assets/img/D.png"),
           title: "FUNCIONES",
           subtitle: "",
           description:
             "Formular y evaluar la factibilidad de realizar programas y proyectos de orientación educativa. Asegurar el cumplimiento de los lineamientos metodológicos requeridos. Realizar informes de avance de los programas y proyectos de extensión educativa. Brindar información de los programas y proyectos de extensión educativa. Participar en la organización de cursos y talleres, así como en la coordinación de estos con las Facultades y Dependencias Centrales de la Universidad que lo requieran. Elaborar la planificación de cursos de capacitación, presenciales o a distancia a ser dictados por la Dirección de Extensión. Coordinar la divulgación de todos los programas educativos de extensión de la Universidad. Las demás funciones que le confieren las leyes y reglamentos, normas y su supervisor inmediato.",
         },
         {
-          image: require("@/assets/P.png"),
+          image: require("@/assets/img/P.png"),
           title: "CONTACTO",
           subtitle: "",
           description:
@@ -178,12 +178,10 @@ export default {
 }
 * {
   font-family: "museo-sans";
-  font-weight: 700;
 }
 p {
   color: #fff;
   font-size: 20px;
-  font-weight: 300;
   line-height: 1.6; /* Interlineado ajustado */
   text-align: justify; /* Justificar texto para mejor lectura */
   margin-bottom: 20px;
@@ -204,7 +202,7 @@ h3 {
       rgba(0, 0, 0, 0.9),
       rgba(0, 0, 0, 0.1)
     ),
-    url("../assets/graduacion.jpg");
+    url("../assets/img/graduacion.jpg");
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -277,7 +275,7 @@ h3 {
 .section-container {
   width: 100%;
   background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
+    url("../assets/img/deuimg.jpg");
 }
 .titulo {
   font-weight: 700;
@@ -293,7 +291,7 @@ h3 {
   padding-top: 80px;
   width: 70%;
   background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
+    url("../assets/img/deuimg.jpg");
   color: #fff;
   gap: 20px;
   margin: 0 auto;
@@ -496,6 +494,13 @@ h3 {
   .breadcrumbs a {
     font-size: 0.9rem;
     line-height: 1;
+  }
+  .mision-vision {
+    padding: 20px 40px;
+    width: 100%;
+  }
+  .sub-header {
+    height: 20vh;
   }
 }
 </style>

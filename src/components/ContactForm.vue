@@ -164,5 +164,9 @@ textarea {
   .message {
     padding-right: 0px;
   }
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+  }
 }
 </style>

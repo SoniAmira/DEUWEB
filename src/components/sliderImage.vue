@@ -70,19 +70,19 @@ export default {
           date: "12/08/2023",
           title: "DEU llevó a cabo 6ta reunión de Coordinadores de Extensión",
           text: "Texto pequeño para el slider 1",
-          image: require("@/assets/nubes.png"),
+          image: require("@/assets/img/nubes.png"),
         },
         {
           date: "13/08/2023",
           title: "DEU llevó a cabo 6ta reunión de Coordinadores de Extensión",
           text: "Texto pequeño para el slider 2",
-          image: require("@/assets/nubes.png"),
+          image: require("@/assets/img/nubes.png"),
         },
         {
           date: "14/08/2023",
           title: "DEU llevó a cabo 6ta reunión de Coordinadores de Extensión",
           text: "Texto pequeño para el slider 3",
-          image: require("@/assets/nubes.png"),
+          image: require("@/assets/img/nubes.png"),
         },
       ],
     };

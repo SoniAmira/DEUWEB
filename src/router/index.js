@@ -28,11 +28,6 @@ const routes = [
     component: () => import("../views/Departamento3View.vue"),
   },
   {
-    path: "/departamentos4",
-    name: "departamentos4",
-    component: () => import("../views/Departamento4View.vue"),
-  },
-  {
     path: "/programas1",
     name: "programas1",
     component: () => import("../views/Programas1View.vue"),

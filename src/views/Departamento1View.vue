@@ -115,21 +115,21 @@ export default {
       currentDescription: "",
       menuItems: [
         {
-          image: require("@/assets/L.png"),
+          image: require("@/assets/img/L.png"),
           title: "OBJETIVOS",
           subtitle: "",
           description:
             "Gestionar el establecimiento de relaciones con organizaciones públicas, privadas, comunitarias y del tercer sector, dentro de los planes estratégicos de la Dirección. Gestionar la comunicación dirigida a divulgar las actividades de la Dirección dentro y fuera de la Universidad, dentro de los planes estratégicos de la Dirección. Planificar, organizar y realizar eventos que impulsen la función de los demás departamentos y dentro de los planes estratégicos de la Dirección.",
         },
         {
-          image: require("@/assets/D.png"),
+          image: require("@/assets/img/D.png"),
           title: "FUNCIONES",
           subtitle: "",
           description:
             "Elaborar y coordinar planes y programas de comunicación internos y externos para proyectar la imagen de la Dirección de Extensión Universitaria. Divulgar a la comunidad mediante los medios de comunicación, videos, notas de prensa, entrevistas, entre otros; los aportes y resultados de la gestión académica, investigación y extensión de la Dirección de Extensión Universitaria, toda vez que se evalúa el impacto que produce el servicio. Diseñar, coordinar y ejecutar la política de comunicación institucional, previamente aprobada por el equipo directivo. Diseñar las actividades de logística y protocolo pertinentes a los eventos de extensión dentro y fuera de las instancias de la Universidad. Mantener comunicación periódica con las Dependencias y Facultades de la Universidad, para proyectar la Dirección de Extensión Universitaria. Realizar estudios de mercadeo que midan la factibilidad de comercializar los productos. Asesorar y colaborar con el resto de las dependencias de la DEU en la preparación del material impreso para la divulgación de la gestión de extensión. Establecer alianzas estratégicas con las coordinaciones de extensión de las Facultades a fin de promover actividades educativas culturales en procura de satisfacer las necesidades de la comunidad. Fomentar la asociación con instituciones públicas y privadas a la realización de actividades educativas en beneficio de la comunidad. Elaborar una propuesta de protocolo para el establecimiento de acuerdos a nivel nacional e internacional. Las demás funciones que le confieren las leyes y reglamentos, normas y su supervisor inmediato.",
         },
         {
-          image: require("@/assets/P.png"),
+          image: require("@/assets/img/P.png"),
           title: "CONTACTO",
           subtitle: "",
           description: `
@@ -169,12 +169,10 @@ export default {
 }
 * {
   font-family: "museo-sans";
-  font-weight: 700;
 }
 p {
   color: #fff;
   font-size: 20px;
-  font-weight: 300;
   line-height: 1.6; /* Interlineado ajustado */
   text-align: justify; /* Justificar texto para mejor lectura */
   margin-bottom: 20px;
@@ -195,7 +193,7 @@ h3 {
       rgba(0, 0, 0, 0.9),
       rgba(0, 0, 0, 0.1)
     ),
-    url("../assets/graduacion.jpg");
+    url("../assets/img/graduacion.jpg");
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -268,7 +266,7 @@ h3 {
 .section-container {
   width: 100%;
   background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
+    url("../assets/img/deuimg.jpg");
 }
 .titulo {
   font-weight: 700;
@@ -284,7 +282,7 @@ h3 {
   padding-top: 80px;
   width: 70%;
   background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
+    url("../assets/img/deuimg.jpg");
   color: #fff;
   gap: 20px;
   margin: 0 auto;
@@ -487,6 +485,13 @@ h3 {
   .breadcrumbs a {
     font-size: 0.9rem;
     line-height: 1;
+  }
+  .mision-vision {
+    padding: 20px 40px;
+    width: 100%;
+  }
+  .sub-header {
+    height: 20vh;
   }
 }
 </style>

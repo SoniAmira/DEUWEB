@@ -12,8 +12,10 @@
     </section>
     <MenuGlobal :menuItems="menuItems" />
     <DiploCont />
-    <h1 class="numbers">Deu en Números</h1>
-    <NumberC />
+    <section>
+      <h1 class="numbers">Deu en Números</h1>
+      <NumberC />
+    </section>
   </div>
 </template>
 
@@ -33,42 +35,42 @@ export default {
     return {
       homeItems: [
         {
-          image: require("../assets/mercy3.jpeg"),
+          image: require("../assets/img/mercy3.jpeg"),
           title: "Venezuela y la UCV son campeones del Pre-CMUDE Bogotá 2024",
         },
         {
-          image: require("../assets/mercy3.jpeg"),
+          image: require("../assets/img/mercy3.jpeg"),
           title:
             "DEU y la Jefatura de Protocolo dictaron Taller de Unificación de Criterios Protocolares",
         },
         {
-          image: require("../assets/mercy3.jpeg"),
+          image: require("../assets/img/mercy3.jpeg"),
           title: "DEU y aliados se unen al Proyecto de Tacarigua",
         },
       ],
       menuItems: [
         {
-          image: require("@/assets/L.png"),
-          icon: require("@/assets/lista.png"),
+          image: require("@/assets/img/L.png"),
+          icon: require("@/assets/img/lista.png"),
           title: "ESPACIOS UNIVERSITARIOS",
           description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, soluta hic eaque natus asperiores eligendi enim provident laborum.",
+            "Descubre cómo acceder y hacer uso de nuestras instalaciones para actividades académicas, culturales y recreativas, fomentando un entorno de aprendizaje e integración.",
           route: "/espacios-universitarios", // Nueva propiedad para definir la ruta
         },
         {
-          image: require("@/assets/D.png"),
-          icon: require("@/assets/organizacion.png"),
+          image: require("@/assets/img/D.png"),
+          icon: require("@/assets/img/organizacion.png"),
           title: "ESTRUCTURA ORGANIZATIVA",
           description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, soluta hic eaque natus asperiores eligendi enim provident laborum.",
+            "Conoce la organización y funcionamiento de nuestra institución, diseñada para garantizar una gestión eficiente y una mejor experiencia académica y administrativa.",
           route: "/departamentos1", // Nueva propiedad para definir la ruta
         },
         {
-          image: require("@/assets/P.png"),
-          icon: require("@/assets/proyecto.png"),
+          image: require("@/assets/img/P.png"),
+          icon: require("@/assets/img/proyecto.png"),
           title: "CERTIFICACIONES Y AVALES",
           description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, soluta hic eaque natus asperiores eligendi enim provident laborum.",
+            "Obtén reconocimientos oficiales que validan tu formación y experiencia, respaldados por nuestra institución y aliados estratégicos.",
           route: "/certificaciones-avales", // Nueva propiedad para definir la ruta
         },
       ],
@@ -93,7 +95,7 @@ export default {
   height: 90vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.555)),
-    url("../assets/biblioteca.jpg");
+    url("../assets/img/biblioteca.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -118,7 +120,6 @@ export default {
 .text-box p {
   margin: 10px 0 40px;
   color: #fff;
-  text-shadow: 2px 7px 4px rgba(0, 0, 0, 0.8);
 }
 
 .header .text-box p {

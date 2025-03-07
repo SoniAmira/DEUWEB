@@ -172,7 +172,7 @@ p {
 
 /* Estilos responsivos */
 /* pantallas grandes */
-@media (max-width: 2000px) {
+@media (max-width: 4000px) {
   .menu-global {
     margin-top: -120px; /* Ajusta el margen superior negativo según sea necesario */
     z-index: 2; /* Asegura que esté por encima de la imagen */
@@ -239,10 +239,10 @@ p {
     font-size: 1.3rem;
   }
   .layer .text-box {
-    top: 16%; /* Ajustar según sea necesario para mover todo el contenedor de texto más arriba */
+    top: 25%; /* Ajustar según sea necesario para mover todo el contenedor de texto más arriba */
   }
   .layer:hover .text-box {
-    top: 10%; /* Ajusta aquí también para que se mueva durante el hover */
+    top: 15%; /* Ajusta aquí también para que se mueva durante el hover */
   }
 }
 </style>

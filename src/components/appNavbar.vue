@@ -106,6 +106,9 @@
           </li>
         </ul>
       </div>
+      <a class="navbar-brand" href="#">
+        <img src="@/assets/img/favicon.png" alt="Logo" class="logo-navbar" />
+      </a>
     </div>
   </nav>
 </template>
@@ -124,6 +127,12 @@ export default {
 </script>
 
 <style scoped>
+/* Estilos para el logo */
+.logo-navbar {
+  height: 50px; /* Ajusta el tamaño del logo */
+  width: auto;
+  padding-left: 10%;
+}
 /* Espaciado entre los ítems de la barra de navegación */
 .navbar-nav .nav-item {
   margin-right: 40px; /* Ajusta este valor según el espacio deseado */

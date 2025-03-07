@@ -36,7 +36,7 @@ body {
 
 body::before {
   content: "";
-  background-image: url("./assets/ucvreloj.png");
+  background-image: url("./assets/img/ucvreloj.png");
   background-size: 130%;
   background-position: center;
   position: fixed;
@@ -55,5 +55,11 @@ body::before {
 .socialbar {
   position: relative;
   z-index: 2;
+}
+@media (max-width: 768px) {
+  body::before {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 </style>

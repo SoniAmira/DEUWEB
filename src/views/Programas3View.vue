@@ -112,21 +112,21 @@ export default {
       currentDescription: "",
       menuItems: [
         {
-          image: require("@/assets/L.png"),
+          image: require("@/assets/img/L.png"),
           title: "OBJETIVOS",
           subtitle: "",
           description:
             "Identificar oportunidades de vinculación entre la universidad y las comunidades, los sectores público y privado, y las organizaciones de la sociedad civil, coordinando con las Facultades el levantamiento de información sobre proyectos, productos y servicios universitarios. Brindar apoyo técnico y administrativo a los equipos responsables de la ejecución de los proyectos universitarios. Divulgar los resultados de los proyectos universitarios a través de diversos canales de comunicación.",
         },
         {
-          image: require("@/assets/D.png"),
+          image: require("@/assets/img/D.png"),
           title: "FUNCIONES",
           subtitle: "",
           description:
             "Identificar, en trabajo conjunto a las facultades, las oportunidades de colaboración entre la Universidad y las comunidades, los sectores público y privado, y las organizaciones de la sociedad civil. Evaluar las propuestas de proyectos universitarios, considerando su relevancia social, impacto potencial y viabilidad técnica y financiera. Seleccionar los proyectos universitarios que se alineen con los objetivos estratégicos de la Universidad y que tengan mayor potencial de impacto en la sociedad. Promover la creación de alianzas estratégicas entre la UCV y el sector productivo, para favorecer la transferencia de tecnología y conocimiento desde la universidad hacia el sector productivo. Brindar apoyo técnico y administrativo a los equipos responsables de la ejecución de los proyectos universitarios. Facilitar la coordinación entre los diferentes actores involucrados en los proyectos universitarios. Monitorear y evaluar el avance de los proyectos universitarios, asegurando el cumplimiento de los objetivos y metas establecidos. Difusión de los resultados de los Proyectos Universitarios. Divulgar los resultados de los proyectos universitarios a través de diversos canales de comunicación. Participar en eventos y ferias relacionadas con la innovación y el desarrollo productivo para promocionar la oferta de la UCV. Organizar eventos para presentar los resultados de los proyectos universitarios a la comunidad universitaria y al público en general. Generar publicaciones científicas y técnicas sobre los resultados de los proyectos universitarios.",
         },
         {
-          image: require("@/assets/P.png"),
+          image: require("@/assets/img/P.png"),
           title: "CONTACTO",
           subtitle: "",
           description:
@@ -177,12 +177,10 @@ export default {
 }
 * {
   font-family: "museo-sans";
-  font-weight: 700;
 }
 p {
   color: #fff;
   font-size: 20px;
-  font-weight: 300;
   line-height: 1.6; /* Interlineado ajustado */
   text-align: justify; /* Justificar texto para mejor lectura */
   margin-bottom: 20px;
@@ -203,7 +201,7 @@ h3 {
       rgba(0, 0, 0, 0.9),
       rgba(0, 0, 0, 0.1)
     ),
-    url("../assets/graduacion.jpg");
+    url("../assets/img/graduacion.jpg");
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -276,7 +274,7 @@ h3 {
 .section-container {
   width: 100%;
   background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
+    url("../assets/img/deuimg.jpg");
 }
 .titulo {
   font-weight: 700;
@@ -292,7 +290,7 @@ h3 {
   padding-top: 80px;
   width: 70%;
   background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
+    url("../assets/img/deuimg.jpg");
   color: #fff;
   gap: 20px;
   margin: 0 auto;
@@ -495,6 +493,13 @@ h3 {
   .breadcrumbs a {
     font-size: 0.9rem;
     line-height: 1;
+  }
+  .mision-vision {
+    padding: 20px 40px;
+    width: 100%;
+  }
+  .sub-header {
+    height: 20vh;
   }
 }
 </style>

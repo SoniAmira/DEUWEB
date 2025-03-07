@@ -113,21 +113,21 @@ export default {
       currentDescription: "",
       menuItems: [
         {
-          image: require("@/assets/L.png"),
+          image: require("@/assets/img/L.png"),
           title: "OBJETIVOS",
           subtitle: "",
           description:
             "Facilitar el acceso a formaciones no académicas dirigidas a la actualización y el mejoramiento profesional de toda la comunidad universitaria. Mantener una oferta educativa y accesible a un público amplio que denota el compromiso social de la Universidad por la sociedad.",
         },
         {
-          image: require("@/assets/D.png"),
+          image: require("@/assets/img/D.png"),
           title: "FUNCIONES",
           subtitle: "",
           description:
             "Diseñar, elaborar y coordinar programas y proyectos que tengan que ver con la proyección extensionista universitaria. Desarrollar un sistema de información para el registro, monitoreo y seguimiento de proyectos y programas de extensión universitaria a nivel nacional. Conceptuar y proponer nuevos productos o servicios que posibiliten la generación de recursos propios, a través de planes de funcionamiento como patrocinantes, convenios marco y específicos entre instituciones públicas y privadas. Participar en el desarrollo de la visión estratégica de la Dirección de Extensión Universitaria, a través de planes estratégicos que permitan demostrar la factibilidad de la permanencia y sustentabilidad de los productos ofertados. Controlar y evaluar los proyectos y programas que se realicen a través de convenios. Cooperar en la oferta de programas de inducción a estudiantes y profesores como actividad preparatoria al inicio de las prácticas comunitarias. Identificar las necesidades más apremiantes en las comunidades, con la finalidad de disponer de una base de datos de problemas comunitarios, la que junto a las que dispongan las Escuelas y Facultades de la UCV, pueden ser considerados como insumos para determinar acciones conjuntas. Diseñar propuestas para la firma de Rector(a), convenios para la presentación del servicio comunitario, con los Consejos Locales de Planificación Pública, Consejos Estadales de Planificación y Coordinación de Políticas Públicas, instituciones y organizaciones públicas o privadas y comunidad organizada, entre otras. Evaluar los proyectos presentados por los sectores con iniciativa, a objeto de ser considerada su aprobación. Garantizar mecanismos de información para las distintas comunidades, sobre las áreas que competen a la Universidad Central de Venezuela relativas al Servicio Comunitario. Las demás funciones que le confiere las leyes y reglamentos, normas y su supervisor inmediato.",
         },
         {
-          image: require("@/assets/P.png"),
+          image: require("@/assets/img/P.png"),
           title: "CONTACTO",
           subtitle: "",
           description:
@@ -172,22 +172,25 @@ export default {
 };
 </script>
 <style scoped>
-.contact-link {
-  color: #01695b;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contact-link:hover {
-  text-decoration: underline;
-}
 @font-face {
   font-family: "museo-sans";
   src: url("../assets/fonts/MuseoSans-100.ttf");
 }
 * {
   font-family: "museo-sans";
-  font-weight: 700;
+}
+p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.6; /* Interlineado ajustado */
+  text-align: justify; /* Justificar texto para mejor lectura */
+  margin-bottom: 20px;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 100;
+  margin: 10px 0;
 }
 
 .sub-header {
@@ -199,7 +202,7 @@ export default {
       rgba(0, 0, 0, 0.9),
       rgba(0, 0, 0, 0.1)
     ),
-    url("../assets/graduacion.jpg");
+    url("../assets/img/graduacion.jpg");
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -272,7 +275,7 @@ export default {
 .section-container {
   width: 100%;
   background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
+    url("../assets/img/deuimg.jpg");
 }
 .titulo {
   font-weight: 700;
@@ -288,7 +291,7 @@ export default {
   padding-top: 80px;
   width: 70%;
   background-image: linear-gradient(#01695b, #01695bef),
-    url("../assets/deuimg.jpg");
+    url("../assets/img/deuimg.jpg");
   color: #fff;
   gap: 20px;
   margin: 0 auto;
@@ -307,11 +310,6 @@ export default {
   font-weight: 300;
 }
 /* */
-@media (min-width: 1024px) {
-  .hero-btn {
-    font-size: 18px; /* Aumenta el tamaño del botón */
-  }
-}
 
 .drawer-enter-active,
 .drawer-leave-active {
@@ -361,12 +359,6 @@ export default {
 .row {
   display: flex;
   flex-wrap: wrap;
-}
-
-@media (max-width: 700px) {
-  .row {
-    flex-direction: column;
-  }
 }
 
 .menu-global {
@@ -426,12 +418,6 @@ export default {
   transform: translateY(0);
 }
 
-@media (max-width: 700px) {
-  .menu-col {
-    flex-direction: column;
-  }
-}
-
 .image {
   max-width: 300px;
   margin-left: 20px;
@@ -441,6 +427,9 @@ export default {
 
 /** */
 @media (max-width: 1024px) {
+  .hero-btn {
+    font-size: 18px; /* Aumenta el tamaño del botón */
+  }
   h1 {
     font-size: 40px; /* Aumenta el tamaño de h1 en pantallas grandes */
   }
@@ -461,6 +450,12 @@ export default {
   }
 }
 @media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .menu-col {
+    flex-direction: column;
+  }
   .sub-header h1 {
     padding-left: 30px;
   }
@@ -475,6 +470,7 @@ export default {
     line-height: 1.4;
     margin-bottom: 25px; /* Reducir espacio entre párrafos */
     padding: 0 5px; /* Reducir padding lateral en dispositivos más pequeños */
+    text-align: left;
   }
   .icon {
     font-size: 1.5rem;
@@ -498,6 +494,13 @@ export default {
   .breadcrumbs a {
     font-size: 0.9rem;
     line-height: 1;
+  }
+  .mision-vision {
+    padding: 20px 40px;
+    width: 100%;
+  }
+  .sub-header {
+    height: 20vh;
   }
 }
 </style>

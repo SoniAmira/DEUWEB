@@ -8,7 +8,7 @@
     <div class="content-bar" v-if="isVisible">
       <button class="close-button" @click="$emit('close')">X</button>
       <h2>{{ title }}</h2>
-      <!-- Usamos v-html para insertar los saltos de línea y el símbolo -->
+      <!-- Descripción dividida en dos columnas -->
       <p class="description" v-html="formattedDescription"></p>
     </div>
   </transition>
@@ -33,7 +33,6 @@ export default {
   },
   computed: {
     formattedDescription() {
-      // Asegúrate de que solo el símbolo y salto de línea se agreguen después de los puntos
       return this.description
         .replace(/(\.\s+)/g, '.<br><span class="highlight-symbol">•</span> ') // Reemplaza puntos seguidos de espacio por el símbolo y salto
         .replace(/(\.\s*)$/, "."); // Asegura que el último punto no tenga salto de línea extra
@@ -62,18 +61,20 @@ export default {
 * {
   font-family: museo-sans;
 }
+
 .content-bar {
   position: fixed;
   top: 0;
   right: 0;
   width: 80%;
   height: 100%;
-  background-image: url("../assets/fondo.png");
+  background-image: url("../assets/img/fondo.png");
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   padding: 20px;
   overflow-y: auto;
   z-index: 1000;
   transform: translateX(100%);
+  color: black;
 }
 
 /* Transición para apertura y cierre */
@@ -82,7 +83,7 @@ export default {
   transition: transform 0.3s ease-in-out;
 }
 
-.slide-enter, 
+.slide-enter,
 .slide-leave-to /* .slide-leave-active en <2.1.8 */ {
   transform: translateX(0);
 }
@@ -114,23 +115,29 @@ export default {
   padding-left: 40px;
   border-bottom: 2px solid #000000;
   text-align: left;
+  font-weight: 700;
 }
-.content-bar p {
-  text-align: left;
-}
+
 .description {
-  padding: 20px 40px;
+  column-count: 2; /* Divide el texto en dos columnas */
+  column-gap: 30px; /* Espacio entre las columnas */
+  padding: 20px;
   color: black;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
   .content-bar {
     width: 100%;
   }
+
+  .description {
+    column-count: 1; /* En pantallas pequeñas, la descripción será de una sola columna */
+  }
 }
 
 .content-bar p:first-of-type::before {
   content: "• "; /* Punto antes del primer párrafo */
-  color: black; /* Asegúrate de que el color coincida con el diseño */
+  color: black;
 }
 </style>
