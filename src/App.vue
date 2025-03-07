@@ -8,7 +8,7 @@
 
 <script>
 import SocialsBar from "./components/SocialsBar.vue";
-import ScrollBtn from "./components/profile-card.vue";
+import ScrollBtn from "./components/ScrollBtn.vue";
 export default {
   components: {
     SocialsBar,

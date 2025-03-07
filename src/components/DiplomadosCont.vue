@@ -68,7 +68,9 @@ h1 {
 }
 a {
   color: #000000;
-  font-weight: 700;
+}
+p {
+  font-size: 20px;
 }
 .diplomados {
   width: 80%;
@@ -88,7 +90,6 @@ a {
 .text-content {
   flex-basis: 30%;
   text-align: left;
-  font-size: 20px;
 }
 .hero-btn {
   border: 1px solid black;
