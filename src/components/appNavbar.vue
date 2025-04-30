@@ -21,7 +21,7 @@
       >
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/about">Nosotros</router-link>
@@ -40,18 +40,13 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownProgramas">
               <li>
-                <router-link class="dropdown-item" to="/programas1"
-                  >Divisíon de Proyectos y Programas</router-link
-                >
-              </li>
-              <li>
                 <router-link class="dropdown-item" to="/programas2"
                   >Programas Regionales</router-link
                 >
               </li>
               <li>
                 <router-link class="dropdown-item" to="/programas3"
-                  >Productos y Servicios UCV</router-link
+                  >Proyectos, Productos y Servicios</router-link
                 >
               </li>
             </ul>
@@ -88,6 +83,11 @@
                   >Educacíon Continua y Permanente</router-link
                 >
               </li>
+              <li>
+                <router-link class="dropdown-item" to="/programas1"
+                  >Division Programas y Proyectos</router-link
+                >
+              </li>
             </ul>
           </li>
 
@@ -102,6 +102,11 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/certificaciones"
               >Certificaciones</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/contactos"
+              >Contáctanos</router-link
             >
           </li>
         </ul>

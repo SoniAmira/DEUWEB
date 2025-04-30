@@ -42,6 +42,11 @@ const routes = [
     name: "programas3",
     component: () => import("../views/Programas3View.vue"),
   },
+  {
+    path: "/contactos",
+    name: "contactos",
+    component: () => import("../views/ContactoView.vue"),
+  },
 ];
 
 const router = createRouter({

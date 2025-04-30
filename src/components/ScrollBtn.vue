@@ -1,6 +1,8 @@
 <template>
   <div>
-    <button class="scroll-to-top" @click="scrollToTop">⮝</button>
+    <button class="scroll-to-top" @click="scrollToTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
   </div>
 </template>
 
@@ -24,7 +26,7 @@ export default {
   background-color: #01695b;
   color: white;
   border-radius: 50%; /* Hace que el botón sea circular */
-  font-size: 30px;
+  font-size: 30px; /* Controla el tamaño del icono */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,5 +43,16 @@ export default {
 
 .scroll-to-top:focus {
   outline: none; /* Eliminar el borde de enfoque */
+}
+
+/* Media Query para ajustar el tamaño del botón y el icono en pantallas pequeñas */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    width: 70px; /* Botón ligeramente más grande */
+    height: 70px;
+    font-size: 35px; /* Icono un poco más grande */
+    right: 15px; /* Ajusta la posición si es necesario */
+    bottom: 15px;
+  }
 }
 </style>

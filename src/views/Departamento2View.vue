@@ -88,21 +88,18 @@
         @close="closeContentBar"
       />
     </section>
-    <ContactForm />
   </div>
 </template>
 
 <script>
 import AppNavbar from "../components/appNavbar";
 import ContentBar from "../components/content-bar.vue";
-import ContactForm from "../components/ContactForm.vue";
 
 export default {
   name: "Departamento1View",
   components: {
     AppNavbar,
     ContentBar,
-    ContactForm,
   },
   data() {
     return {
@@ -131,7 +128,7 @@ export default {
           title: "CONTACTO",
           subtitle: "",
           description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, soluta hic eaque natus asperiores eligendi enim provident laborum.",
+            "Coordinador: MAYERKIS HIDALGO. Tlf: (0412) 5502096. Correo: deu.depgsu@gmail.com",
         },
       ],
     };

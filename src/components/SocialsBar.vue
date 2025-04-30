@@ -2,19 +2,21 @@
   <nav>
     <ul>
       <li>
-        <a href="#">
-          <img src="..\assets\img\facebook.png" alt="Facebook Icon" />
-          <span>Facebook</span>
+        <a href="https://t.me/DEU_UCV">
+          <img src="..\assets\img\telegrama.png" alt="Facebook Icon" />
+          <span>Telegram</span>
         </a>
       </li>
       <li>
-        <a href="#">
-          <img src="..\assets\img\twitter.png" alt="Twitter Icon" />
-          <span>Twitter</span>
+        <a href="https://direcciondeextensionuniversitaria.blogspot.com/">
+          <img src="..\assets\img\blogger.png" alt="Twitter Icon" />
+          <span>Blog</span>
         </a>
       </li>
       <li>
-        <a href="#">
+        <a
+          href="https://www.instagram.com/deuucv?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        >
           <img src="..\assets\img\instagram.png" alt="Instagram Icon" />
           <span>Instagram</span>
         </a>
@@ -52,10 +54,10 @@ nav li a {
   transition: all 0.3s linear;
 }
 nav li:nth-child(1) a {
-  background: #4267b2;
+  background: #33aade;
 }
 nav li:nth-child(2) a {
-  background: black;
+  background: #ff5722;
 }
 nav li:nth-child(3) a {
   background: #e1306c;

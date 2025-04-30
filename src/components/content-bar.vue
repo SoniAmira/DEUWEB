@@ -8,8 +8,11 @@
     <div class="content-bar" v-if="isVisible">
       <button class="close-button" @click="$emit('close')">X</button>
       <h2>{{ title }}</h2>
-      <!-- Descripción dividida en dos columnas -->
-      <p class="description" v-html="formattedDescription"></p>
+      <p
+        class="description"
+        v-html="formattedDescription"
+        :style="{ columnCount: descriptionColumnCount }"
+      ></p>
     </div>
   </transition>
 </template>
@@ -36,6 +39,15 @@ export default {
       return this.description
         .replace(/(\.\s+)/g, '.<br><span class="highlight-symbol">•</span> ') // Reemplaza puntos seguidos de espacio por el símbolo y salto
         .replace(/(\.\s*)$/, "."); // Asegura que el último punto no tenga salto de línea extra
+    },
+    descriptionColumnCount() {
+      // Puedes simplificar la lógica para el column-count si siempre quieres 1 en pantallas pequeñas
+      if (window.innerWidth <= 768) {
+        return 1;
+      } else {
+        const threshold = 500; // Ajusta este valor para pantallas grandes
+        return this.description.length > threshold ? 2 : 1;
+      }
     },
   },
   methods: {
@@ -66,7 +78,7 @@ export default {
   position: fixed;
   top: 0;
   right: 0;
-  width: 80%;
+  width: 60%;
   height: 100%;
   background-image: url("../assets/img/fondo.png");
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
@@ -119,8 +131,8 @@ export default {
 }
 
 .description {
-  column-count: 2; /* Divide el texto en dos columnas */
-  column-gap: 30px; /* Espacio entre las columnas */
+  /* El column-count se controla dinámicamente o por el @media query */
+  column-gap: 30px; /* Espacio entre las columnas (cuando hay 2) */
   padding: 20px;
   color: black;
   text-align: left;
@@ -132,7 +144,7 @@ export default {
   }
 
   .description {
-    column-count: 1; /* En pantallas pequeñas, la descripción será de una sola columna */
+    column-count: 1; /* En pantallas pequeñas, la descripción siempre será de una sola columna */
   }
 }
 

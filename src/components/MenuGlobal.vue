@@ -172,10 +172,13 @@ p {
 
 /* Estilos responsivos */
 /* pantallas grandes */
-@media (max-width: 4000px) {
+@media (max-width: 7000px) {
   .menu-global {
-    margin-top: -120px; /* Ajusta el margen superior negativo según sea necesario */
+    margin-top: -130px; /* Ajusta el margen superior negativo según sea necesario */
     z-index: 2; /* Asegura que esté por encima de la imagen */
+  }
+  .text-box p {
+    font-size: 1rem;
   }
 }
 /* mi pantalla */
@@ -236,7 +239,7 @@ p {
     padding-right: 20px;
   }
   .text-box p {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .layer .text-box {
     top: 25%; /* Ajustar según sea necesario para mover todo el contenedor de texto más arriba */

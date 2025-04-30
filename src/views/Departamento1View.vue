@@ -90,19 +90,16 @@
         @close="closeContentBar"
       />
     </section>
-    <ContactForm />
   </div>
 </template>
 
 <script>
 import AppNavbar from "../components/appNavbar";
 import ContentBar from "../components/content-bar.vue";
-import ContactForm from "../components/ContactForm.vue";
 
 export default {
   name: "Departamento1View",
   components: {
-    ContactForm,
     AppNavbar,
     ContentBar,
   },
@@ -132,13 +129,8 @@ export default {
           image: require("@/assets/img/P.png"),
           title: "CONTACTO",
           subtitle: "",
-          description: `
-            <div class="contact-info">
-              <p><strong>Coordinador:</strong> Juan Pérez</p>
-              <p><strong>Teléfono:</strong> <a href="tel:+123456789">+1 234 567 89</a></p>
-              <p><strong>Correo:</strong> juanperez@examplecom </p>
-            </div>
-          `,
+          description:
+            "Coordinador: AGNEDY MATERANO. Tlf: (0212) 605-3908. Correo: deu.eventos.ucv.@gmail.com",
         },
       ],
     };

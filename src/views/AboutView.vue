@@ -100,7 +100,7 @@
       <div class="row-about">
         <div class="about-col">
           <div class="about-container-img">
-            <img src="../assets/img/IMAGEN_A.png" />
+            <img src="../assets/img/deuabout.png" />
           </div>
         </div>
         <div class="about-col">
@@ -113,15 +113,34 @@
             acciones en la proyección y el impacto comunitario.
           </p>
           <div class="btn-container">
-            <button @click="openDrawer" class="hero-btn">Conoce más ⇀</button>
-            <transition
-              name="slide"
-              @before-enter="beforeEnter"
-              @enter="enter"
-              @leave="leave"
-            >
-              <Drawer v-if="isDrawerOpen" @close="closeDrawer" />
-            </transition>
+            <button @click="showFuncionesContentBar = true" class="hero-btn">
+              Conoce más ⇀
+            </button>
+            <ContentBar
+              :isVisible="showFuncionesContentBar"
+              title="FUNCIONES"
+              description="Coordinar, ejecutar, organizar y asesorar en materia de
+              extensión. Presidir el Consejo Central de Extensión. Coordinar, supervisar y evaluar las actividades de extensión de la
+              Universidad. Mantener informado al Consejo Central de Extensión de los hechos
+              relevantes del acontecer nacional e internacional que requieran la
+              participación de la UCV. Representar a la Universidad en el Núcleo de Directores de
+              Extensión del Consejo Nacional de Universidades. Representar a la DEU en los Consejos Centrales de las Dependencias
+              Centrales, donde los hubiere. Desarrollar el plan estratégico de actividades de extensión que
+              responda a la solución de la problemática nacional. Evaluar la factibilidad técnica y económica de los proyectos
+              presentados a la Dirección. Elaborar y controlar la ejecución del presupuesto asignado. Establecer y promover la interacción con personalidades e
+              instancias del Estado, Gobiernos Regionales, Locales, Universidades
+              Nacionales, Gremios, Asociaciones, Organismos y Empresas vinculadas
+              a la labor extensionista. Promover y desarrollar Convenios de Cooperación Interinstitucional
+              nacionales e internacionales con el propósito de facilitar la
+              ejecución de programas, proyectos y otras actividades de
+              extensión. Mantener relación directa con los distintos entes de la
+              Universidad, a fin de garantizar la presencia e imagen de la DEU en
+              la UCV. Participar activamente en la promoción y divulgación de los logros,
+              planes y proyectos de extensión de la UCV. Cumplir con las funciones que le sean señaladas en los Reglamentos
+              y Normativas emanados del Consejo Universitario y por el
+              Rector."
+              @close="handleCloseFunciones"
+            />
           </div>
         </div>
       </div>
@@ -144,30 +163,30 @@
             progreso social, respondiendo a las necesidades del entorno.
           </p>
           <div class="btn-container">
-            <button @click="showContentBar = true" class="hero-btn">
+            <button @click="showResenaContentBar = true" class="hero-btn">
               Conoce más ⇀
             </button>
             <ContentBar
-              :isVisible="showContentBar"
+              :isVisible="showResenaContentBar"
               title="RESEÑA HISTORICA"
               description="La Universidad Central de Venezuela (UCV), fundada en
-            1721, es la institución de educación superior más antigua del país y
-            se ha destacado por su compromiso con la docencia, la investigación
-            y la extensión universitaria. En 1988, se
-            estableció la Comisión de Extensión con el objetivo de impulsar las
-            actividades de extensión universitaria y proponer acciones que
-            promovieran la integración de todas las Facultades y Dependencias.  Este esfuerzo inicial sentó las bases para una reestructuración más
-            profunda que culminó el 11 de diciembre de 1995, cuando el Consejo
-            Universitario aprobó la creación de la Coordinación Central de
-            Extensión. Posteriormente, el 27 de noviembre de 2002, por decisión
-            del Consejo Universitario, se le otorgó el rango de Dirección,
-            consolidándose como la Dirección de Extensión Universitaria de la
-            UCV. En noviembre de 2024, la Dirección de Extensión Universitaria celebró una jornada
-            conmemorativa titulada Celebrando nuestra historia y con visión
-            hacia el futuro, en el Aula Magna de la UCV.  Este evento destacó
-            los logros alcanzados y reafirmó el compromiso de la dirección con
-            la formación, la gestión social y la innovación. A lo largo de su historia, la Dirección de Extensión Universitaria ha sido fundamental en la consolidación de la UCV como una institución comprometida con el desarrollo integral de la sociedad venezolana, promoviendo la educación continua y la participación activa en la resolución de los desafíos sociales y culturales del país."
-              @close="handleClose"
+              1721, es la institución de educación superior más antigua del país y
+              se ha destacado por su compromiso con la docencia, la investigación
+              y la extensión universitaria. En 1988, se
+              estableció la Comisión de Extensión con el objetivo de impulsar las
+              actividades de extensión universitaria y proponer acciones que
+              promovieran la integración de todas las Facultades y Dependencias. Este esfuerzo inicial sentó las bases para una reestructuración más
+              profunda que culminó el 11 de diciembre de 1995, cuando el Consejo
+              Universitario aprobó la creación de la Coordinación Central de
+              Extensión. Posteriormente, el 27 de noviembre de 2002, por decisión
+              del Consejo Universitario, se le otorgó el rango de Dirección,
+              consolidándose como la Dirección de Extensión Universitaria de la
+              UCV. En noviembre de 2024, la Dirección de Extensión Universitaria celebró una jornada
+              conmemorativa titulada Celebrando nuestra historia y con visión
+              hacia el futuro, en el Aula Magna de la UCV. Este evento destacó
+              los logros alcanzados y reafirmó el compromiso de la dirección con
+              la formación, la gestión social y la innovación. A lo largo de su historia, la Dirección de Extensión Universitaria ha sido fundamental en la consolidación de la UCV como una institución comprometida con el desarrollo integral de la sociedad venezolana, promoviendo la educación continua y la participación activa en la resolución de los desafíos sociales y culturales del país."
+              @close="handleCloseResena"
             />
           </div>
         </div>
@@ -179,14 +198,12 @@
 
 <script>
 import AppNavbar from "../components/appNavbar";
-import Drawer from "../components/Sidebar.vue";
 import ContentBar from "../components/content-bar.vue";
 import MenuBar from "../components/MenuBar.vue";
 
 export default {
   name: "AboutView",
   components: {
-    Drawer,
     AppNavbar,
     ContentBar,
     MenuBar,
@@ -194,28 +211,30 @@ export default {
   data() {
     return {
       isDrawerOpen: false,
-      showContentBar: false,
+      // Variables de estado separadas para cada ContentBar
+      showFuncionesContentBar: false,
+      showResenaContentBar: false,
       menuItems: [
         {
-          image: require("@/assets/img/josephp.jpg"),
+          image: require("@/assets/img/imgantonio.jpg"),
           title: "Ing. José Antonio Fernández",
           subtitle: "Sub-Director",
           description:
             "Subdirector de la Dirección de Extensión Universitaria, enfocado en fortalecer las relaciones interinstitucionales y coordinar iniciativas que impulsen la innovación y el desarrollo.",
         },
         {
-          image: require("@/assets/img/mercyphp.jpg"),
+          image: require("@/assets/img/imgmercy.jpg"),
           title: "Prof. Mercy Ospina",
           subtitle: "Directora",
           description:
             "Directora de la Dirección de Extensión Universitaria, comprometida con la promoción del conocimiento y la acción social para generar un impacto positivo en la comunidad universitaria y la sociedad en general.",
         },
         {
-          image: require("@/assets/img/eglin1.png"),
-          title: "Sra. Eglin González",
-          subtitle: "Secretaria Ejecutiva",
+          image: require("@/assets/img/imgelizabeth1.png"),
+          title: "Sra. Elizabeth Piña",
+          subtitle: "Jefa de División",
           description:
-            "Secretaria General de la Dirección de Extensión Universitaria, responsable de la organización y el soporte administrativo para garantizar el cumplimiento de los objetivos estratégicos del área.",
+            "Jefa de la División de Programas y Proyectos, responsable de la planificación, coordinación y supervisión de las actividades del equipo para asegurar la consecución de las metas operativas y estratégicas de la división.",
         },
       ],
     };
@@ -241,14 +260,19 @@ export default {
       el.style.transform = "translateX(100%)";
       done();
     },
-    handleClose() {
-      this.showContentBar = false;
+    // Métodos para cerrar cada ContentBar individualmente
+    handleCloseFunciones() {
+      this.showFuncionesContentBar = false;
+    },
+    handleCloseResena() {
+      this.showResenaContentBar = false;
     },
   },
 };
 </script>
 
 <style scoped>
+/* Tu CSS actual permanece sin cambios */
 * {
   font-family: museo-sans;
 }
@@ -300,11 +324,10 @@ h3 {
   width: 70%;
   margin: auto;
   padding-top: 150px;
-  padding-bottom: 150px;
 }
 
 .about-col {
-  flex-basis: 40%;
+  flex-basis: 50%;
 }
 
 .about-col img {
@@ -428,6 +451,7 @@ h3 {
 .organigrama {
   width: 90%;
   height: 90%;
+  padding-bottom: 100px;
 }
 /* */
 .link-section {
@@ -610,9 +634,6 @@ h3 {
   .titulo {
     font-size: 1.5rem;
   }
-  .paragraphs h2 {
-    font-size: 1rem;
-  }
   .paragraphs p {
     font-size: 1rem;
     text-align: left;
@@ -639,7 +660,7 @@ h3 {
     height: 20vh;
   }
   .row-about {
-    gap: 50px;
+    gap: 0px;
   }
 }
 </style>
