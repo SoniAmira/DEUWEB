@@ -294,7 +294,7 @@ export default {
 }
 
 .sub-header h1 {
-  padding-top: 100px;
+  padding-top: 50px;
   text-align: left;
   padding-left: 140px;
 }
@@ -582,10 +582,6 @@ h3 {
   p {
     font-size: 20px; /* Aumenta el tamaño del texto de los párrafos */
     line-height: 1.8; /* Ajusta el interlineado */
-  }
-
-  .sub-header h1 {
-    font-size: 40px; /* Aumenta el tamaño del h1 en la sección de sub-header */
   }
 
   .hero-btn {

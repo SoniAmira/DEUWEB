@@ -1,7 +1,7 @@
 <template>
   <div style="min-height: 100vh; width: 100%">
     <section class="sub-header">
-      <h1>Programas</h1>
+      <h1>Departamento</h1>
     </section>
     <AppNavbar />
     <section class="link-section">
@@ -10,7 +10,7 @@
           <li>
             <router-link to="/"><span>🚀</span></router-link>
           </li>
-          <li><router-link to="/programas1">Programas</router-link></li>
+          <li><router-link to="/departamentos1">Departamento</router-link></li>
           <li>
             <router-link to="/programas1"
               >Divisíon de Proyectos y Programas</router-link
@@ -206,9 +206,9 @@ h3 {
   color: #fff;
 }
 .sub-header h1 {
-  padding-top: 100px;
+  padding-top: 50px;
   text-align: left;
-  padding-left: 140px;
+  padding-left: 30px;
 }
 /* */
 .link-section {
@@ -438,10 +438,6 @@ h3 {
     font-size: 20px; /* Aumenta el tamaño del texto de los párrafos */
     line-height: 1.8; /* Ajusta el interlineado */
   }
-
-  .sub-header h1 {
-    font-size: 40px; /* Aumenta el tamaño del h1 en la sección de sub-header */
-  }
   .icon {
     font-size: 3rem; /* Aumenta el tamaño de los iconos */
   }
@@ -453,14 +449,11 @@ h3 {
   .menu-col {
     flex-direction: column;
   }
-  .sub-header h1 {
-    padding-left: 30px;
-  }
   .row-about {
     flex-direction: column;
   }
   h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   p {
     font-size: 1rem; /* Reducir tamaño aún más en pantallas muy pequeñas */

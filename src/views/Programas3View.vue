@@ -13,7 +13,7 @@
           <li><router-link to="/programas1">Programas</router-link></li>
           <li>
             <router-link to="/programas3"
-              >Productos y Servicios UCV</router-link
+              >Proyecto, Productos y Servicios</router-link
             >
           </li>
         </ul>
@@ -22,7 +22,7 @@
     <section class="section-container">
       <div class="mision-vision">
         <h1 class="titulo">
-          Productos y Servicios UCV
+          Proyecto, Productos y Servicios
           <span class="icon">🚀 </span>
         </h1>
         <div class="content-container">
@@ -205,7 +205,7 @@ h3 {
   color: #fff;
 }
 .sub-header h1 {
-  padding-top: 100px;
+  padding-top: 50px;
   text-align: left;
   padding-left: 140px;
 }
@@ -437,10 +437,6 @@ h3 {
     font-size: 20px; /* Aumenta el tamaño del texto de los párrafos */
     line-height: 1.8; /* Ajusta el interlineado */
   }
-
-  .sub-header h1 {
-    font-size: 40px; /* Aumenta el tamaño del h1 en la sección de sub-header */
-  }
   .icon {
     font-size: 3rem; /* Aumenta el tamaño de los iconos */
   }
@@ -459,7 +455,7 @@ h3 {
     flex-direction: column;
   }
   h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   p {
     font-size: 1rem; /* Reducir tamaño aún más en pantallas muy pequeñas */
