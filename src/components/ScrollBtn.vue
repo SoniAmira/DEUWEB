@@ -48,11 +48,12 @@ export default {
 /* Media Query para ajustar el tamaño del botón y el icono en pantallas pequeñas */
 @media (max-width: 768px) {
   .scroll-to-top {
-    width: 70px; /* Botón ligeramente más grande */
-    height: 70px;
+    width: 45px; /* Botón ligeramente más grande */
+    height: 45px;
     font-size: 35px; /* Icono un poco más grande */
     right: 15px; /* Ajusta la posición si es necesario */
     bottom: 15px;
+    font-size: 20px;
   }
 }
 </style>
