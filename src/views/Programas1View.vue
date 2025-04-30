@@ -1,7 +1,7 @@
 <template>
   <div style="min-height: 100vh; width: 100%">
     <section class="sub-header">
-      <h1>Departamento</h1>
+      <h1>Departamentos</h1>
     </section>
     <AppNavbar />
     <section class="link-section">
@@ -10,7 +10,7 @@
           <li>
             <router-link to="/"><span>🚀</span></router-link>
           </li>
-          <li><router-link to="/departamentos1">Departamento</router-link></li>
+          <li><router-link to="/departamentos1">Departamentos</router-link></li>
           <li>
             <router-link to="/programas1"
               >Divisíon de Proyectos y Programas</router-link
@@ -208,7 +208,7 @@ h3 {
 .sub-header h1 {
   padding-top: 50px;
   text-align: left;
-  padding-left: 30px;
+  padding-left: 140px;
 }
 /* */
 .link-section {
@@ -454,6 +454,9 @@ h3 {
   }
   h1 {
     font-size: 1.5rem;
+  }
+  .sub-header h1 {
+    padding-left: 30px;
   }
   p {
     font-size: 1rem; /* Reducir tamaño aún más en pantallas muy pequeñas */
