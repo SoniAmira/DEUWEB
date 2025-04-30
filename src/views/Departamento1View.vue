@@ -185,7 +185,7 @@ h3 {
       rgba(0, 0, 0, 0.9),
       rgba(0, 0, 0, 0.1)
     ),
-    url("../assets/img/graduacion.jpg");
+    url("../assets/img/estudiantesimg.jpg");
   background-position: center;
   background-size: cover;
   text-align: center;
