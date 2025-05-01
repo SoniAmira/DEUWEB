@@ -270,9 +270,7 @@ export default {
   },
 };
 </script>
-
 <style scoped>
-/* Tu CSS actual permanece sin cambios */
 * {
   font-family: museo-sans;
 }
@@ -303,8 +301,8 @@ p {
   color: #fff;
   font-size: 20px;
   font-weight: 300;
-  line-height: 1.6; /* Interlineado ajustado */
-  text-align: justify; /* Justificar texto para mejor lectura */
+  line-height: 1.6;
+  text-align: justify;
   margin-bottom: 20px;
 }
 
@@ -313,7 +311,7 @@ h3 {
   font-weight: 100;
   margin: 10px 0;
 }
-/* */
+
 .row-about {
   display: flex;
   justify-content: center;
@@ -373,7 +371,8 @@ h3 {
   transition: transform 1s ease, opacity 1s ease;
 }
 
-.drawer-enter, .drawer-leave-to /* .drawer-leave-active in <2.1.8 */ {
+.drawer-enter,
+.drawer-leave-to {
   transform: translateX(100%);
   opacity: 0;
 }
@@ -390,7 +389,7 @@ h3 {
 .layer:hover .menuItems {
   background: #01695b;
 }
-/* */
+
 .content-container {
   display: flex;
   align-items: flex-start;
@@ -408,14 +407,15 @@ h3 {
   background-image: linear-gradient(#01695b, #01695bef),
     url("../assets/img/deuimg.jpg");
 }
+
 .titulo {
   font-weight: 700;
   line-height: 1em;
   font-family: "museo-sans";
   padding-bottom: 20px;
-  margin: 0 auto; /* Centra el contenido */
-  border-bottom: 3px solid #ffffff; /* Color y grosor de la línea */
-  padding-bottom: 5px; /* Espacio entre el título y la línea */
+  margin: 0 auto;
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 5px;
 }
 
 .mision-vision {
@@ -432,7 +432,7 @@ h3 {
 
 .paragraphs {
   flex-direction: column;
-  margin: 0 auto; /* Centra el contenido */
+  margin: 0 auto;
   padding-top: 40px;
 }
 
@@ -440,7 +440,7 @@ h3 {
   font-size: 20px;
   font-weight: 300;
 }
-/* */
+
 .image {
   max-width: 300px;
   margin-left: 20px;
@@ -453,7 +453,7 @@ h3 {
   height: 90%;
   padding-bottom: 100px;
 }
-/* */
+
 .link-section {
   background-color: #025247;
 }
@@ -464,7 +464,7 @@ h3 {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  background-color: #025247; /* Fondo claro */
+  background-color: #025247;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-left: 100px;
 }
@@ -472,7 +472,7 @@ h3 {
 .breadcrumbs ul {
   list-style: none;
   display: flex;
-  gap: 10px; /* Espacio entre los elementos */
+  gap: 10px;
   margin: 0;
   padding: 0;
 }
@@ -483,33 +483,33 @@ h3 {
 }
 
 .breadcrumbs li:not(:last-child)::after {
-  content: "›"; /* Separador entre enlaces */
+  content: "›";
   margin-left: 10px;
   margin-right: 10px;
-  color: #ffffff; /* Color del separador */
+  color: #ffffff;
 }
 
 .breadcrumbs a {
   text-decoration: none;
-  color: #ffffff; /* Azul profesional */
-  font-weight: 500; /* Peso medio */
+  color: #ffffff;
+  font-weight: 500;
   transition: color 0.3s;
 }
 
 .breadcrumbs a:hover {
-  color: #ffffff; /* Azul más oscuro en hover */
+  color: #ffffff;
 }
 
-/** */
 .valores {
   font-weight: 700;
   line-height: 1em;
   font-family: "museo-sans";
   padding-bottom: 20px;
-  margin: 0 auto; /* Centra el contenido */
-  padding-bottom: 50px; /* Espacio entre el título y la línea */
+  margin: 0 auto;
+  padding-bottom: 50px;
   padding-top: 100px;
 }
+
 .card-container {
   display: flex;
   justify-content: space-between;
@@ -521,140 +521,175 @@ h3 {
 }
 
 .card {
-  width: 23%; /* Ajusta al 23% para que quepan 4 cards horizontalmente */
-  background-color: #e7e7e7; /* Cambia el color si lo deseas */
+  width: 23%;
+  background-color: #e7e7e7;
   padding: 20px;
-  border-radius: 15px; /* Borde más redondeado */
+  border-radius: 15px;
   text-align: center;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más suave */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Asegura que los elementos estén en columna */
-  justify-content: space-between; /* Espacio distribuido entre los elementos */
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Efecto de elevar la tarjeta */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .card .icon {
-  flex-shrink: 0; /* No permite que el icono se reduzca */
+  flex-shrink: 0;
 }
 
 .card .icon img {
-  width: 40px; /* Tamaño ligeramente mayor para los iconos */
+  width: 40px;
   height: 40px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
 .card .icon img:hover {
-  transform: scale(1.1); /* Efecto de agrandar el icono al hacer hover */
+  transform: scale(1.1);
 }
 
 .card .title {
-  font-size: 20px; /* Título más grande */
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: black; /* Color de título más oscuro */
-  flex-grow: 0; /* Evita que el título se estire */
+  color: black;
+  flex-grow: 0;
 }
 
 .card .text {
   font-size: 14.5px;
-  color: black; /* Color de texto un poco más suave */
+  color: black;
   text-align: left;
-  line-height: 1.5; /* Mayor altura de línea para mejor legibilidad */
-  flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+  line-height: 1.5;
+  flex-grow: 1;
 }
-/**** */
+
 @media (max-width: 1024px) {
   h1 {
-    font-size: 40px; /* Aumenta el tamaño de h1 en pantallas grandes */
+    font-size: 40px;
   }
 
   .titulo {
-    font-size: 40px; /* Aumenta el tamaño del título en pantallas grandes */
+    font-size: 40px;
   }
 
   p {
-    font-size: 20px; /* Aumenta el tamaño del texto de los párrafos */
-    line-height: 1.8; /* Ajusta el interlineado */
+    font-size: 20px;
+    line-height: 1.8;
   }
 
   .hero-btn {
-    font-size: 18px; /* Aumenta el tamaño del botón */
+    font-size: 18px;
   }
 
   .icon {
-    font-size: 3rem; /* Aumenta el tamaño de los iconos */
+    font-size: 3rem;
   }
 }
+
 @media (max-width: 768px) {
   .sub-header h1 {
     padding-left: 30px;
   }
-  .card {
-    width: 100%; /* En pantallas pequeñas, las cards ocupan el 100% del ancho */
-    margin-bottom: 20px;
+
+  .card-container {
+    justify-content: center;
+    gap: 0;
+    width: 100%;
   }
+
+  .card {
+    width: 70%;
+    margin-bottom: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card .icon {
+    margin-bottom: 10px;
+  }
+
   .card .icon img {
-    width: 40px; /* Reduce el tamaño de los iconos en pantallas más pequeñas */
-    height: 40px; /* Reduce el tamaño de los iconos */
+    width: 30px;
+    height: 30px;
   }
 
   .card .title {
-    font-size: 1rem; /* Reduce el tamaño del título */
+    font-size: 0.9rem;
+    margin-bottom: 10px;
   }
 
   .card .text {
-    font-size: 1rem; /* Reduce el tamaño del texto */
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1.4;
+    flex-grow: 0;
   }
+
   .row-about {
     flex-direction: column;
   }
+
   h1 {
     font-size: 1.5rem;
   }
+
   p {
-    font-size: 1rem; /* Reducir tamaño aún más en pantallas muy pequeñas */
+    font-size: 1rem;
     line-height: 1.4;
-    margin-bottom: 25px; /* Reducir espacio entre párrafos */
-    padding: 0 5px; /* Reducir padding lateral en dispositivos más pequeños */
+    margin-bottom: 25px;
+    padding: 0 5px;
   }
+
   .icon {
     font-size: 1.5rem;
   }
+
   .titulo {
     font-size: 1.5rem;
   }
+
   .paragraphs p {
     font-size: 1rem;
     text-align: left;
   }
+
   .hero-btn {
-    font-size: 1rem; /* Aumenta el tamaño del botón */
+    font-size: 1rem;
   }
+
   .objetivos {
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 80px;
   }
+
   .breadcrumbs {
     margin-left: 10px;
   }
+
   .breadcrumbs a {
     font-size: 0.9rem;
     line-height: 1.5;
   }
+
   .mision-vision {
     padding: 20px 40px;
     width: 100%;
   }
+
   .sub-header {
     height: 20vh;
   }
+
   .row-about {
     gap: 0px;
   }

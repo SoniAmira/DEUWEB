@@ -111,9 +111,6 @@
           </li>
         </ul>
       </div>
-      <a class="navbar-brand" href="#">
-        <img src="@/assets/img/favicon.png" alt="Logo" class="logo-navbar" />
-      </a>
     </div>
   </nav>
 </template>

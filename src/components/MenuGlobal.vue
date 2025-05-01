@@ -8,11 +8,8 @@
               <img :src="item.image" />
               <div class="layer">
                 <div class="text-box">
-                  <!-- Icono primero -->
                   <img :src="item.icon" class="icon" />
-                  <!-- Título segundo -->
                   <h3>{{ item.title }}</h3>
-                  <!-- Descripción tercero -->
                   <p>{{ item.description }}</p>
                 </div>
               </div>
@@ -51,13 +48,12 @@ export default {
 }
 
 .menu-global {
-  height: 90%;
   width: 100%;
-  margin: 0;
+  margin: 0 auto; /* Centra horizontalmente */
   text-align: center;
   overflow: hidden;
   position: relative;
-  margin-top: -92px; /* Ajusta el margen superior negativo según sea necesario */
+  margin-top: -92px; /* Margen negativo por defecto. Ajusta este valor para un tamaño base */
   z-index: 2; /* Asegura que esté por encima de la imagen */
 }
 
@@ -89,7 +85,7 @@ export default {
   overflow: hidden;
   padding-left: 0;
   padding-right: 0;
-  height: 85vh;
+  height: 75vh;
 }
 
 .menu-col img {
@@ -171,25 +167,32 @@ p {
 }
 
 /* Estilos responsivos */
-/* pantallas grandes */
-@media (max-width: 7000px) {
+/* Ajuste para pantallas grandes */
+@media (min-width: 1025px) {
   .menu-global {
-    margin-top: -130px; /* Ajusta el margen superior negativo según sea necesario */
-    z-index: 2; /* Asegura que esté por encima de la imagen */
+    margin-top: -110px; /* Ajusta este valor para pantallas de escritorio grandes */
   }
   .text-box p {
     font-size: 1rem;
   }
 }
-/* mi pantalla */
-@media (max-width: 1366px) {
+
+/* Ajuste para pantallas muy grandes */
+@media (min-width: 1400px) {
   .menu-global {
-    margin-top: -120px; /* Ajusta el margen superior negativo según sea necesario */
-    z-index: 2; /* Asegura que esté por encima de la imagen */
+    margin-top: -130px; /* Ajusta este valor para pantallas más grandes aún */
   }
 }
+
+/* Ajuste para pantallas extra grandes */
+@media (min-width: 1800px) {
+  .menu-global {
+    margin-top: -150px; /* Ajusta este valor para pantallas extra grandes */
+  }
+}
+
+/* Ajuste para iPad y pantallas medianas (ya existente, con una ligera modificación) */
 @media (max-width: 1024px) {
-  /* Ajuste para iPad y pantallas medianas */
   .menu-global {
     margin-top: 0; /* Elimina el margen negativo para que el menú no esté sobre la imagen */
   }
@@ -228,7 +231,7 @@ p {
 
   .menu-col {
     flex-basis: 100%; /* Ajusta a 100% en móviles */
-    height: 70vw; /* Hace que las columnas sean cuadradas en móviles pequeños */
+    aspect-ratio: 1 / 1; /* Mantiene cuadrados los items en móviles */
   }
 
   .menu-col img {
