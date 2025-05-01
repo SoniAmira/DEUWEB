@@ -319,7 +319,7 @@ h3 {
 }
 
 .objetivos {
-  width: 70%;
+  width: 80%;
   margin: auto;
   padding-top: 150px;
 }
