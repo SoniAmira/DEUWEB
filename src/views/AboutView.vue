@@ -319,7 +319,7 @@ h3 {
 }
 
 .objetivos {
-  width: 80%;
+  width: 70%;
   margin: auto;
   padding-top: 150px;
 }
@@ -670,6 +670,7 @@ h3 {
   .objetivos {
     padding-top: 50px;
     padding-bottom: 80px;
+    width: 80%;
   }
 
   .breadcrumbs {
